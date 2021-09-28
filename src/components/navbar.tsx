@@ -15,11 +15,11 @@ const items = [
 
 export const NavBarDesktop: VFC = () => {
   return (
-    <nav className="text-center px-3 mt-32 max-h-12 hidden sm:block">
+    <nav className="text-center px-3 mt-32 lg:mt-28 max-h-12 hidden sm:block">
       {items.map(({ href, label }) => {
         return (
           <Link key={href} href={href}>
-            <a className="rounded-t p-1 text-center font-medium text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 mr-1 lg:mr-3  hover:text-gray-100 whitespace-nowrap">
+            <a className="rounded-t p-1 text-center font-medium text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 mr-1 lg:mr-3 lg:text-2xl lg:py-2 hover:text-gray-100 whitespace-nowrap">
               {label}
             </a>
           </Link>
@@ -46,7 +46,8 @@ export const NavBarMobile: VFC = () => {
   };
   return (
     <>
-      <div className="sm:hidden absolute top-6 left-6">
+      {/* <div className="sm:hidden absolute top-6 left-6"> */}
+      <div className="sm:hidden bg-gray-400 rounded pt-1 px-2">
         <button
           type="button"
           className="w-8 h-8 ml-1 mr-1 rounded"
@@ -70,7 +71,7 @@ export const NavBarMobile: VFC = () => {
           </svg>
         </button>
         <div
-          className={`fixed w-full h-full top-24 right-0 bg-gray-300  opacity-85 z-10 transform ease-in-out duration-300 ${
+          className={`fixed w-full h-full top-24 right-0 bg-purple-50 bg-opacity-0 z-10 transform ease-in-out duration-300 ${
             navShow ? "translate-x-0" : "translate-x-full"
           }`}
         >

@@ -1,4 +1,5 @@
 import type { VFC } from "react";
+import { NavBarMobile } from "src/components/navbar";
 import { siteMetadata } from "src/data/siteMetadata";
 
 import { CustomLink } from "./CustomLink";
@@ -14,8 +15,9 @@ export const Footer: VFC = () => {
           <div>{` • `}</div>
           <CustomLink href="/">{siteMetadata.title}</CustomLink>
         </div>
-        <div className="my-8 text-sm text-gray-500 ">
+        <div className="my-8 text-sm text-gray-500 flex justify-around w-screen">
           <CustomLink href="https://over40webclub.netlify.app/">Powered by Over 40 Web Club</CustomLink>
+          <NavBarMobile />
         </div>
       </div>
     </footer>
