@@ -28,8 +28,8 @@ const Home = ({ content }) => {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
       <div className="divide-y divide-gray-200 ">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-700 pb-5 sm:text-4xl sm:leading-10 md:text-6xl md:leading-10">
+        <div className="pt-6 md:mt-8 pb-8 space-y-2 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-700 pb-5 sm:leading-10 md:text-4xl md:leading-10">
             {content.title}
           </h1>
           <p className="text-lg leading-7 text-gray-500 ">
