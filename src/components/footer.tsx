@@ -15,10 +15,10 @@ export const Footer: VFC = () => {
           <div>{` • `}</div>
           <CustomLink href="/">{siteMetadata.title}</CustomLink>
         </div>
-        <div className="my-8 text-sm text-gray-500 flex justify-around w-screen">
+        <div className="my-8 text-sm text-gray-500">
           <CustomLink href="https://over40webclub.netlify.app/">Powered by Over 40 Web Club</CustomLink>
-          <NavBarMobile />
         </div>
+        <NavBarMobile />
       </div>
     </footer>
   );

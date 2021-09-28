@@ -47,7 +47,7 @@ export const NavBarMobile: VFC = () => {
   return (
     <>
       {/* <div className="sm:hidden absolute top-6 left-6"> */}
-      <div className="sm:hidden bg-gray-400 rounded pt-1 px-2">
+      <div className="sm:hidden bg-gray-400 bg-opacity-80 rounded pt-1 px-2 fixed right-5 bottom-10">
         <button
           type="button"
           className="w-8 h-8 ml-1 mr-1 rounded"
@@ -88,7 +88,7 @@ export const NavBarMobile: VFC = () => {
                   key={href}
                   href={href}
                   onClick={handleOnToggleNav}
-                  className="flex flex-col text-2xl tracking-widest p-1 font-medium mx-auto text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-green-700 focus:to-yellow-500 opacity-80 hover:text-gray-100 text-center"
+                  className="flex flex-col text-2xl tracking-widest p-1 font-medium mx-auto text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-green-700 focus:to-yellow-500 opacity-90 hover:text-gray-100 text-center"
                 >
                   {label}
                 </CustomLink>
