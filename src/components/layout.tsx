@@ -6,7 +6,7 @@ export const Layout: VFC<{ children: ReactNode }> = (props) => {
   return (
     <>
       <Header />
-      <main>{props.children}</main>
+      <main className="mx-3 sm:mx-10 md:mx-auto">{props.children}</main>
       <Footer />
     </>
   );
