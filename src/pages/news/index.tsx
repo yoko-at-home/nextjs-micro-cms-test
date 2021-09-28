@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { LayoutSub } from "src/components/layoutSub";
+import { PageSEO } from "src/components/SEO";
+import { siteMetadata } from "src/data/siteMetadata";
 
 const News: NextPage = () => {
   return (
     <LayoutSub>
-      <Head>
-        <title>News</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageSEO title={`News- ${siteMetadata.author}`} description={siteMetadata.description} />
+
       <h2>News</h2>
     </LayoutSub>
   );

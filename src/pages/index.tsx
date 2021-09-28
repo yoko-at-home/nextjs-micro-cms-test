@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { Layout } from "src/components/layout";
+import { PageSEO } from "src/components/SEO";
+import { siteMetadata } from "src/data/siteMetadata";
 
 const Home: NextPage = () => {
   const handleClick = () => {
@@ -9,10 +10,8 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <Head>
-        <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+
       <h2>Home</h2>
       <button onClick={handleClick}>Button</button>
     </Layout>
