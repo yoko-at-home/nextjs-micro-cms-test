@@ -4,6 +4,6 @@ module.exports = {
   typescript: { ignoreDevErrors: true },
   poweredByHeader: false,
   images: {
-    domains: ["images.unsplash.com", "source.unsplash.com", "unsplash.com"],
+    domains: ["images.unsplash.com", "source.unsplash.com", "unsplash.com", "images.microcms-assets.io"],
   },
 };
