@@ -30,11 +30,10 @@ export const NavBarDesktop: VFC = () => {
 };
 
 export const NavBarMobile: VFC = () => {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  const [navShow, setNavShow] = useState(false);
+  const [isNavShow, setIsNavShow] = useState(false);
 
   const handleOnToggleNav = () => {
-    setNavShow((status) => {
+    setIsNavShow((status) => {
       if (status) {
         document.body.style.overflow = "auto";
       } else {
@@ -55,7 +54,7 @@ export const NavBarMobile: VFC = () => {
           onClick={handleOnToggleNav}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="text-gray-200 ">
-            {navShow ? (
+            {isNavShow ? (
               <path
                 fillRule="evenodd"
                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -71,8 +70,8 @@ export const NavBarMobile: VFC = () => {
           </svg>
         </button>
         <div
-          className={`fixed w-full h-full top-24 right-0 bg-purple-50 bg-opacity-0 z-10 transform ease-in-out duration-300 ${
-            navShow ? "translate-x-0" : "translate-x-full"
+          className={`fixed w-full h-full top-0 right-0 bg-purple-50 z-10 transform ease-in-out duration-300 ${
+            isNavShow ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <button
@@ -88,7 +87,7 @@ export const NavBarMobile: VFC = () => {
                   key={href}
                   href={href}
                   onClick={handleOnToggleNav}
-                  className="flex flex-col text-2xl tracking-widest p-1 font-medium mx-auto text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-green-700 focus:to-yellow-500 opacity-90 hover:text-gray-100 text-center"
+                  className="flex flex-col text-2xl tracking-widest p-1 font-medium mx-auto text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-green-700 focus:to-yellow-500 opacity-90 hover:text-gray-100 text-right pr-3 py-3"
                 >
                   {label}
                 </CustomLink>

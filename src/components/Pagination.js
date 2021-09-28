@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import Link from "next/link";
 
 export const Pagination = ({ totalCount }) => {
