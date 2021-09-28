@@ -1,8 +1,8 @@
 export const siteMetadata = {
-  title: "Gen-Scent Research Laboratory",
-  author: "Minako Hada",
-  headerTitle: "Gen-Scent Research Laboratory",
-  description: "Gen-Scent Research Laboratory is a ...",
+  author: "yoko",
+  title: "xx Research Laboratory",
+  headerTitle: "xx Research Laboratory",
+  description: "xx Research Laboratory is a ...",
   language: "jp-ja",
   siteUrl: "https://www.gen-scent.com",
   siteRepo: "https://www.gen-scent.com",
