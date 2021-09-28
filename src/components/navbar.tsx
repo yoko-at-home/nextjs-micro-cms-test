@@ -76,14 +76,14 @@ export const NavBarMobile: VFC = () => {
           <button
             type="button"
             aria-label="toggle modal"
-            className="fixed w-full h-full cursor-auto focus:outline-none"
+            className="fixed w-full h-4/5 -top-7 cursor-auto focus:outline-none"
             onClick={handleOnToggleNav}
           ></button>
           <nav className="text-center mt-40">
             {items.map(({ href, label }) => {
               return (
                 <CustomLink key={href} href={href} onClick={handleOnToggleNav}>
-                  <a className="flex flex-col text-2xl tracking-widest  p-1 font-medium text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-green-700 focus:to-yellow-500 opacity-80 hover:text-gray-100 text-center">
+                  <a className="flex flex-col text-2xl tracking-widest  p-1 font-medium rounded mb-2 mx-auto text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-green-700 focus:to-yellow-500 opacity-80 hover:text-gray-100 text-center">
                     {label}
                   </a>
                 </CustomLink>
