@@ -16,10 +16,4 @@ export const siteMetadata = {
   youtube: "https://youtube.com",
   linkedin: "https://www.linkedin.com",
   locale: "ja-JP",
-  analytics: {
-    // supports plausible, simpleAnalytics or googleAnalytics
-    plausibleDataDomain: "", // e.g. tailwind-nextjs-starter-blog.vercel.app
-    simpleAnalytics: false, // true or false
-    googleAnalyticsId: "", // e.g. UA-000000-2 or G-XXXXXXX
-  },
 };
