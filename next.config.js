@@ -3,4 +3,7 @@ module.exports = {
   reactStrictMode: true,
   typescript: { ignoreDevErrors: true },
   poweredByHeader: false,
+  images: {
+    domains: ["images.unsplash.com", "source.unsplash.com", "unsplash.com"],
+  },
 };

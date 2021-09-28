@@ -1,16 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Layout } from "src/components/layout";
+import { LayoutSub } from "src/components/layoutSub";
 
 const News: NextPage = () => {
   return (
-    <Layout>
+    <LayoutSub>
       <Head>
         <title>News</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h2>News</h2>
-    </Layout>
+    </LayoutSub>
   );
 };
 
