@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import { Layout } from "src/components/layout";
+import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
 
@@ -29,9 +30,7 @@ const Home = ({ content }) => {
 
       <div className="divide-y divide-gray-200 ">
         <div className="pt-6 md:mt-8 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-700 pb-5 sm:leading-10 md:text-4xl md:leading-10">
-            {content.title}
-          </h1>
+          <PageTitle>{content.title}</PageTitle>
           <p className="text-lg leading-7 text-gray-500 ">
             {/* {siteMetadata.description}
             <br /> */}
