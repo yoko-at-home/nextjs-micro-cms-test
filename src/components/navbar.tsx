@@ -14,11 +14,11 @@ const items = [
 
 export const NavBarDesktop: VFC = () => {
   return (
-    <nav className="text-center p-3 bg-yellow-100 max-h-12 hidden sm:block">
+    <nav className="text-center px-3 mt-32 max-h-12 hidden sm:block">
       {items.map(({ href, label }) => {
         return (
           <Link key={href} href={href}>
-            <a className="p-1 text-center font-medium text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 mr-1 lg:mr-3  hover:text-gray-100 whitespace-nowrap">
+            <a className="rounded-t p-1 text-center font-medium text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 mr-1 lg:mr-3  hover:text-gray-100 whitespace-nowrap">
               {label}
             </a>
           </Link>

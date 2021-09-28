@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { VFC } from "react";
 import { CustomLink } from "src/components/CustomLink";
-import { NavBarMobile } from "src/components/navbar";
+import { NavBarDesktop, NavBarMobile } from "src/components/navbar";
 import { siteMetadata } from "src/data/siteMetadata";
 
 export const Header: VFC = () => {
@@ -32,6 +32,7 @@ export const Header: VFC = () => {
             <Image src={"/static/images/logo.png"} alt="logo" width="50px" height="50px" />
           </CustomLink>
         </div>
+        <NavBarDesktop />
       </header>
       <NavBarMobile />
     </>
