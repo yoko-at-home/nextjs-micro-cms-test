@@ -1,7 +1,7 @@
 import type { VFC } from "react";
 import { siteMetadata } from "src/data/siteMetadata";
 
-import { CustomLink } from "./Link";
+import { CustomLink } from "./CustomLink";
 
 export const Footer: VFC = () => {
   return (
