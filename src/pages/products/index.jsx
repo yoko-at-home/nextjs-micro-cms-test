@@ -80,7 +80,7 @@ const Products = () => {
                 <p>会員登録されていない他は...より会員登録をお願いします。</p>
                 <button
                   onClick={close}
-                  className="rounded p-1 text-center font-medium text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 mb-3 lg:mr-3 lg:text-2xl lg:py-2 hover:text-gray-100"
+                  className="rounded p-1 text-center font-medium text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 mb-3 lg:mr-3 lg:py-2 hover:text-gray-100"
                 >
                   閉じる
                 </button>
