@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const Pagination = ({ totalCount }) => {
   const PER_PAGE = 3;
@@ -10,10 +11,12 @@ export const Pagination = ({ totalCount }) => {
     });
   };
 
+  const router = useRouter();
+
   return (
-    <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-      <nav className="flex justify-center">
-        <ul className="flex flex-row">
+    <div className="pt-6 pb-8 space-y-2 md:space-y-5 flex justify-center">
+      <nav className="flex flex-row">
+        <ul className="flex">
           {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => {
             return (
               <li key={index}>
@@ -26,6 +29,15 @@ export const Pagination = ({ totalCount }) => {
             );
           })}
         </ul>
+        <div>
+          {router.asPath === "/news" ? null : (
+            <Link href={`/news`}>
+              <a className="text-gray-300 px-3 bg-gradient-to-r from-gray-400 to-gray-500 opacity-80 p-3 rounded">
+                News Top
+              </a>
+            </Link>
+          )}
+        </div>
       </nav>
     </div>
   );
