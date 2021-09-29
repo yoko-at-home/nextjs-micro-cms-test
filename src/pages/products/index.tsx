@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { Layout } from "src/components/layout";
+import { PageTitle } from "src/components/PageTitle";
+import { PageSEO } from "src/components/SEO";
+import { siteMetadata } from "src/data/siteMetadata";
 
 const Products: NextPage = () => {
   return (
     <Layout>
-      <Head>
-        <title>Products</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <h2>Products</h2>
+      <PageSEO title={`Products- ${siteMetadata.author}`} description={siteMetadata.description} />
+
+      <PageTitle>Products</PageTitle>
     </Layout>
   );
 };
