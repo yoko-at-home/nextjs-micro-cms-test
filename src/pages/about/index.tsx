@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { LayoutSub } from "src/components/layoutSub";
+import { LayoutSub } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";

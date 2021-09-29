@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 // eslint-disable-next-line no-restricted-imports
 import React from "react";
-import { LayoutSub } from "src/components/layoutSub";
+import { LayoutSub } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { Pagination } from "src/components/Pagination";
 import { PageSEO } from "src/components/SEO";

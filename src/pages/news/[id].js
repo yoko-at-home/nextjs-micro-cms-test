@@ -4,26 +4,29 @@
 /* eslint-disable @next/next/no-img-element */
 // pages/news/[id].js
 import Link from "next/link";
+import { LayoutHNewsArticles } from "src/components/layout";
 // import Date from 'src/lib/date'
 import { client } from "src/lib/client";
 
 export default function BlogId({ news }) {
   return (
-    <main>
-      <h1 className="font-bold text-lg sm:text-xl md:text-3xl lg:text-4xl mt-6 lg:text-center">{news.title}</h1>
-      <p className="text-right mt-3 mb-10">{news.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          // eslint-disable-next-line @typescript-eslint/naming-convention
-          __html: `${news.body}`,
-        }}
-      />
-      <div className="absolute mt-5 text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 opacity-80 p-3 rounded inline-block right-3">
-        <Link href={`/news`}>
-          <a className="">News Top</a>
-        </Link>
-      </div>
-    </main>
+    <LayoutHNewsArticles>
+      <main>
+        <h1 className="font-bold text-lg sm:text-xl md:text-3xl lg:text-4xl mt-6 lg:text-center">{news.title}</h1>
+        <p className="text-right mt-3 mb-10">{news.publishedAt}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            // eslint-disable-next-line @typescript-eslint/naming-convention
+            __html: `${news.body}`,
+          }}
+        />
+        <div className="absolute mt-5 text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 opacity-80 p-3 rounded inline-block right-10 md:right-20 lg:right-40">
+          <Link href={`/news`}>
+            <a className="">News Top</a>
+          </Link>
+        </div>
+      </main>
+    </LayoutHNewsArticles>
   );
 }
 
