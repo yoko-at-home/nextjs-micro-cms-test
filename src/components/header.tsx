@@ -38,7 +38,7 @@ export const Header: VFC = () => {
   );
 };
 
-const imgSrc = "https://source.unsplash.com/random/1200x400";
+const imgSrc = "https://source.unsplash.com/1600x500/?nature,water";
 
 export const HeaderSub: VFC = () => {
   return (
