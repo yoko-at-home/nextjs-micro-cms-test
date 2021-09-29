@@ -36,7 +36,7 @@ const Products = () => {
       <PageTitle>Products</PageTitle>
       <div className="divide-y divide-gray-200 ">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <p className="text-lg leading-7 text-gray-500 ">Showcase your projects with a hero image (16 x 9)</p>
+          <p className="text-lg leading-7 text-gray-500 ">製品をヒーローイメージを使ってご紹介できます。</p>
         </div>
         <div className="container py-12">
           <div className="flex flex-wrap m-4">
