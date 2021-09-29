@@ -5,7 +5,6 @@
 // pages/news/[id].js
 import Link from "next/link";
 import { LayoutHNewsArticles } from "src/components/layout";
-// import Date from 'src/lib/date'
 import { client } from "src/lib/client";
 import { Date } from "src/lib/date";
 
