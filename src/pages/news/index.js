@@ -1,8 +1,5 @@
-/* eslint-disable import/no-default-export */
 import Image from "next/image";
 import Link from "next/link";
-// eslint-disable-next-line no-restricted-imports
-import React from "react";
 import { LayoutSub } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { Pagination } from "src/components/Pagination";
@@ -10,7 +7,7 @@ import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
 
 // eslint-disable-next-line react/destructuring-assignment
-export default function News({ news, totalCount }) {
+const News = ({ news, totalCount }) => {
   return (
     <LayoutSub>
       <PageSEO title={`News- ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -43,17 +40,19 @@ export default function News({ news, totalCount }) {
       </div>
     </LayoutSub>
   );
-}
+};
 export const getStaticProps = async () => {
   const key = {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
   const data = await fetch("https://gen-scent.microcms.io/api/v1/news?offset=0&limit=3", key)
-    // eslint-disable-next-line arrow-body-style
-    .then((res) => res.json())
-    // eslint-disable-next-line arrow-body-style
-    .catch(() => null);
+    .then((res) => {
+      return res.json();
+    })
+    .catch(() => {
+      return null;
+    });
 
   return {
     props: {
@@ -62,3 +61,6 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+// eslint-disable-next-line import/no-default-export
+export default News;
