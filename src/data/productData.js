@@ -1,4 +1,4 @@
-const productData = [
+export const productData = [
   {
     title: "香気成分ライブラリ付GCMS 解析ソフトウェア",
     description: `世界中の研究者が採取した香り成分の質量スペクトルライブラリを収容した定性ソフトウェアです。今まで見つけることができなかった数百もの微小ピークの探索に適しています。`,
@@ -36,5 +36,3 @@ const productData = [
     href: "https://docs.google.com/document/d/1XazSunlTurccu4_QlJ13-zfcBo5I9_G_SzNMsvLc1Bw/edit?usp=sharing",
   },
 ];
-
-export default productData;
