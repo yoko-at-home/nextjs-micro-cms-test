@@ -36,7 +36,7 @@ const Products = () => {
       <PageTitle>Products</PageTitle>
       <div className="divide-y divide-gray-200 ">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <p className="text-lg leading-7 text-gray-500 ">Showcase your projects with a hero image (16 x 9)</p>
+          <p className="text-lg leading-7 text-gray-500 ">製品をヒーローイメージを使ってご紹介できます。</p>
         </div>
         <div className="container py-12">
           <div className="flex flex-wrap m-4">
@@ -53,7 +53,7 @@ const Products = () => {
                   className="md:w-1/2 md"
                 >
                   <Card
-                    // key={d.title}
+                    key={d.href}
                     title={d.title}
                     description={d.description}
                     imgSrc={d.imgSrc}
@@ -64,8 +64,8 @@ const Products = () => {
             })}
           </div>
           <Modal>
-            <div className="bg-white px-10 py-30 rounded">
-              <h1>会員登録がお済みのお客様は画像のタップからデータにアクセスできます。</h1>
+            <div className="bg-white px-10 py-10 rounded">
+              <h1 className="mt-5">会員登録がお済みのお客様は画像のタップからデータにアクセスできます。</h1>
               <p>
                 <CardModal
                   // isOpen={d.key === selectedItem}
@@ -76,7 +76,7 @@ const Products = () => {
                   href={selectedItem?.href}
                 />
               </p>
-              <div className="flex justify-between">
+              <div className="flex justify-between mt-8">
                 <p>会員登録されていない他は...より会員登録をお願いします。</p>
                 <button
                   onClick={close}

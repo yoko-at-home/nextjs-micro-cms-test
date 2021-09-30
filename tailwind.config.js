@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         "hero-image": "url('/static/images/laurel.png')",
       },
+      fontFamily: {
+        sans: ["calibri", "Noto Sans", "Noto Sans JP", "sans-serif"],
+      },
     },
   },
   variants: {

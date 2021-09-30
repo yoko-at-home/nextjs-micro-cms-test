@@ -5,15 +5,32 @@
 // pages/news/[id].js
 import Link from "next/link";
 import { LayoutHNewsArticles } from "src/components/layout";
-// import Date from 'src/lib/date'
 import { client } from "src/lib/client";
+import { Date } from "src/lib/date";
 
 export default function BlogId({ news }) {
+  const publishedAt = news.publishedAt;
+  const revisedAt = news.revisedAt;
   return (
     <LayoutHNewsArticles>
       <main>
-        <h1 className="font-bold text-lg sm:text-xl md:text-3xl lg:text-4xl mt-6 lg:text-center">{news.title}</h1>
-        <p className="text-right mt-3 mb-10">{news.publishedAt}</p>
+        <h1 className="font-bold text-lg sm:text-xl md:text-3xl lg:text-4xl mt-6 lg:text-center py-12">{news.title}</h1>
+        <div className="flex flex-col text-right mt-3 mb-10">
+          {publishedAt === revisedAt ? (
+            <div>
+              Published: <Date className="text-sm text-blueGray-500 mb-3" dateString={news.publishedAt} />
+            </div>
+          ) : (
+            <>
+              <div>
+                Revised at: <Date className="text-sm text-blueGray-500" dateString={news.revisedAt} />
+              </div>
+              <div>
+                Published at: <Date className="text-sm text-blueGray-500 mb-3" dateString={news.publishedAt} />
+              </div>
+            </>
+          )}
+        </div>
         <div
           dangerouslySetInnerHTML={{
             // eslint-disable-next-line @typescript-eslint/naming-convention

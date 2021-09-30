@@ -26,11 +26,11 @@ export const productData = [
   {
     title: "香気成分の化学特性 シミュレーションソフトウェア",
     description: `ハンブルグ大学のWilfried A. König教授、ロベルテ社、およびHoch化合物の構造から化学特性を推定する ソフトウェアです。においの閾（いき）値などを予測します。muth博士により監修されたライブラリ付ソフトウェアです。`,
-    imgSrc: "/static/images/time-machine.jpg",
+    imgSrc: "/static/images/laurel.png",
     href: "/members",
   },
   {
-    title: "香気成分ライブラリ付GCMS 解析ソフトウェア",
+    title: "香気成分ライブラリ 解析ソフトウェア",
     description: `世界中の研究者が採取した香り成分の質量スペクトルライブラリを収容した定性ソフトウェアです。今まで見つけることができなかった数百もの微小ピークの探索に適しています。`,
     imgSrc: "/static/images/laurel.png",
     href: "https://docs.google.com/document/d/1XazSunlTurccu4_QlJ13-zfcBo5I9_G_SzNMsvLc1Bw/edit?usp=sharing",

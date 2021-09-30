@@ -16,6 +16,15 @@ export const Pagination = ({ totalCount }) => {
   return (
     <div className="pt-6 pb-8 space-y-2 md:space-y-5 flex justify-center">
       <nav className="flex flex-row">
+        <div>
+          {router.asPath === "/news" ? null : (
+            <Link href={`/news`}>
+              <a className="mr-5 text-xs font-bold text-gray-300 px-3 bg-gradient-to-r from-gray-400 to-gray-500 opacity-80 p-3 rounded">
+                News Top
+              </a>
+            </Link>
+          )}
+        </div>
         <ul className="flex">
           {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => {
             return (
@@ -29,7 +38,7 @@ export const Pagination = ({ totalCount }) => {
             );
           })}
         </ul>
-        <div>
+        {/* <div>
           {router.asPath === "/news" ? null : (
             <Link href={`/news`}>
               <a className="text-gray-300 px-3 bg-gradient-to-r from-gray-400 to-gray-500 opacity-80 p-3 rounded">
@@ -37,7 +46,7 @@ export const Pagination = ({ totalCount }) => {
               </a>
             </Link>
           )}
-        </div>
+        </div> */}
       </nav>
     </div>
   );
