@@ -3,14 +3,6 @@ const handler = (req, res) => {
     const sgMail = require("@sendgrid/mail");
     sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY); //SendGridのAPIキー
 
-    // const msg = {
-    //   to: req.body.email,
-    //   from: "support@example.com",
-    //   subject: "お問合せありがとうございました。",
-    //   text: "お問合せを受け付けました。回答をお待ちください。" + req.body.message,
-    //   html: "お問合せを受け付けました。回答をお待ちください。" + req.body.message,
-    // };
-
     const msg = {
       to: req.body.to,
       from: req.body.email,
