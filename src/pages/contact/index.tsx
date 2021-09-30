@@ -12,6 +12,8 @@ const Contact: NextPage = () => {
 
     const res = await fetch("/api/send", {
       body: JSON.stringify({
+        to: process.env.NEXT_PUBLIC_SENDGRID_TO_ADDRESS,
+        name: event.target.fullname.value,
         email: event.target.email.value,
         message: event.target.message.value,
       }),
@@ -29,9 +31,18 @@ const Contact: NextPage = () => {
 
       <PageTitle>Contact</PageTitle>
       <div className="mt-10 sm:mt-0">
-        {/* <div className="md:grid md:grid-cols-2 md:gap-6"> */}
         <div className="mt-5 md:mt-0">
           <form onSubmit={handleRegisterUser}>
+            <div className="mb-3">
+              <label htmlFor="fullname">お名前</label>
+              <input
+                id="fullname"
+                name="fullname"
+                type="text"
+                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                placeholder="お名前"
+              />
+            </div>
             <div className="mb-3">
               <label htmlFor="email">メールアドレス</label>
               <input
@@ -62,7 +73,6 @@ const Contact: NextPage = () => {
           </form>
         </div>
       </div>
-      {/* </div> */}
     </Layout>
   );
 };
