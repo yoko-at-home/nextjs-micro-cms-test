@@ -8,22 +8,13 @@ const handler = (req, res) => {
       from: req.body.email,
       subject: "お問合せありがとうございました。",
       text:
-        "お問合せを受け付けました。回答をお待ちください。" +
+        "お問合せを受け付けました。\n回答をお待ちください。\n" +
         "お名前: " +
         req.body.name +
-        "様" +
+        "様\n" +
         "メールアドレス: " +
         req.body.email +
-        "お問い合わせ内容: " +
-        req.body.message,
-      html:
-        "お問合せを受け付けました。回答をお待ちください。" +
-        "お名前: " +
-        req.body.name +
-        "様" +
-        "メールアドレス: " +
-        req.body.email +
-        "お問い合わせ内容: " +
+        "\nお問い合わせ内容: " +
         req.body.message,
     };
 
