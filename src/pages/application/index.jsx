@@ -82,17 +82,23 @@ const Application = (props) => {
       <PageSEO title={`Application- ${siteMetadata.author}`} description={siteMetadata.description} />
 
       <PageTitle>Application</PageTitle>
-      <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
-        {props.news.map((news) => {
-          return (
-            // eslint-disable-next-line react/jsx-key
-            <Link href={`application/${news.id}`} passHref>
-              <a>
-                <AppCard key={news.title} title={news.title} description={news.description} />
-              </a>
-            </Link>
-          );
-        })}
+      <div className="divide-y divide-gray-200 ">
+        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
+          <p className="text-lg leading-7 text-gray-500 ">製品をヒーローイメージを使ってご紹介できます。</p>
+        </div>
+        <div className="container py-12"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
+          {props.news.map((news) => {
+            return (
+              // eslint-disable-next-line react/jsx-key
+              <Link href={`application/${news.id}`} passHref>
+                <a>
+                  <AppCard key={news.title} title={news.title} description={news.description} />
+                </a>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </Layout>
   );
