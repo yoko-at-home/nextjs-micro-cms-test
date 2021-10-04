@@ -1,7 +1,7 @@
 /* eslint-disable import/no-default-export */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import type { NextPage } from "next";
-import type { VFC } from "react";
+// import type { NextPage } from "next";
+// import type { VFC } from "react";
 import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
@@ -41,13 +41,14 @@ const items = [
   },
 ];
 
-type ItemType = {
-  id?: number,
-  title: string,
-  description: string,
-};
+// type ItemType = {
+//   id?: number,
+//   title: string,
+//   description: string,
+// };
 
-const AppCard: VFC<ItemType> = (props) => {
+// const AppCard: VFC<ItemType> = (props) => {
+const AppCard = (props) => {
   return (
     <div key={props.id}>
       <div
@@ -73,7 +74,8 @@ const AppCard: VFC<ItemType> = (props) => {
   );
 };
 
-const Application: NextPage<ItemType> = () => {
+// const Application: NextPage<ItemType> = () => {
+const Application = () => {
   return (
     <Layout>
       <PageSEO title={`Application- ${siteMetadata.author}`} description={siteMetadata.description} />
