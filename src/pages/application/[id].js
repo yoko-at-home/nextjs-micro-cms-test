@@ -2,13 +2,13 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-// pages/news/[id].js
+// pages/application/[id].js
 import Link from "next/link";
 import { LayoutHNewsArticles } from "src/components/layout";
 import { client } from "src/lib/client";
 import { Date } from "src/lib/date";
 
-export default function BlogId({ news }) {
+export default function ApplicationId({ news }) {
   const publishedAt = news.publishedAt;
   const revisedAt = news.revisedAt;
   return (
@@ -38,8 +38,8 @@ export default function BlogId({ news }) {
           }}
         />
         <div className="absolute mt-5 text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 opacity-80 p-3 rounded inline-block right-10 md:right-20 lg:right-40">
-          <Link href={`/news`}>
-            <a className="">News Top</a>
+          <Link href={`/application`}>
+            <a className="">Application Top</a>
           </Link>
         </div>
       </main>
@@ -52,7 +52,7 @@ export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "news" });
 
   const paths = data.contents.map((content) => {
-    return `/news/${content.id}`;
+    return `/application/${content.id}`;
   });
   return { paths, fallback: false };
 };
