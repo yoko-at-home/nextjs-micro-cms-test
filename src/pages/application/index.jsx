@@ -60,13 +60,13 @@ const AppCard = (props) => {
         <div className="absolute top-3 right-5 left-0 mx-5 mt-2 flex justify-between items-center">
           <div
             // href="#"
-            className="cursor-pointer text-md rounded bg-gray-600 text-black px-5 py-2 uppercase hover:bg-white bg-opacity-60 hover:text-indigo-600 transition ease-in-out duration-500"
+            className="cursor-pointer text-md rounded bg-gray-600 text-gray-100 px-5 py-2 hover:bg-white bg-opacity-80 hover:text-indigo-600 transition ease-in-out duration-500"
           >
             {props.title}
           </div>
         </div>
         <main className="p-5 z-10">
-          <div className="cursor-pointer p-1 h-28 text-md tracking-tight text-white hover:text-gray-800 hover:bg-gray-50 hover:bg-opacity-40 rounded hover:font-black word-break overflow-y-scroll">
+          <div className="cursor-pointer p-1 h-28 text-md tracking-tight text-white hover:bg-gray-50 hover:bg-opacity-20 rounded word-break overflow-y-scroll transition ease-in-out duration-500">
             {props.description}
           </div>
         </main>
