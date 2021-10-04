@@ -3,6 +3,10 @@ const handler = (req, res) => {
     const sgMail = require("@sendgrid/mail");
     sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY); //SendGridのAPIキー
 
+    // validation logic
+    // const reg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/;
+    // if (!reg.match(req.body.email)) return;
+
     const msg = {
       to: req.body.to,
       from: req.body.email,
