@@ -11,27 +11,27 @@ const items = [
   {
     id: 1,
     title: "aaaaライブラリ",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ?",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
   },
   {
     id: 2,
     title: "bbb",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ?",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
   },
   {
     id: 3,
     title: "ccc",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ?",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
   },
   {
     id: 4,
     title: "ddd",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ?",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
   },
   {
     id: 5,
     title: "eee",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ?",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
   },
   {
     id: 6,
@@ -58,13 +58,13 @@ const AppCard: VFC<ItemType> = (props) => {
         <div className="absolute top-10 right-5 left-0 mx-5 mt-2 flex justify-between items-center">
           <a
             href="#"
-            className="text-xs rounded bg-indigo-600 text-black px-5 py-2 uppercase hover:bg-white bg-opacity-60 hover:text-indigo-600 transition ease-in-out duration-500"
+            className="cursor-pointer text-xs rounded bg-indigo-600 text-black px-5 py-2 uppercase hover:bg-white bg-opacity-60 hover:text-indigo-600 transition ease-in-out duration-500"
           >
             {props.title}
           </a>
         </div>
         <main className="p-5 z-10">
-          <div className="h-28 text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline break-words overflow-y-scroll">
+          <div className="cursor-pointer p-1 h-28 text-md tracking-tight font-medium leading-7 font-regular text-white hover:text-gray-800 hover:bg-gray-50 hover:bg-opacity-40 rounded hover:font-black word-break overflow-y-scroll">
             {props.description}
           </div>
         </main>
