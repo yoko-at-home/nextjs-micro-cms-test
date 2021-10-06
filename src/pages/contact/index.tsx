@@ -12,7 +12,6 @@ const Contact: NextPage = () => {
   const router = useRouter();
   const handleRegisterUser = async (event: any) => {
     event.preventDefault();
-    router.push("/success");
 
     const res = await fetch("/api/send", {
       body: JSON.stringify({
@@ -28,6 +27,10 @@ const Contact: NextPage = () => {
     });
 
     const result = await res.json();
+    router.push({
+      pathname: "/success",
+      query: result,
+    });
   };
   return (
     <Layout>

@@ -1,4 +1,5 @@
 const handler = (req, res) => {
+  let msg = {};
   if (req.method === "POST") {
     const sgMail = require("@sendgrid/mail");
     sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY); //SendGridのAPIキー
@@ -7,7 +8,7 @@ const handler = (req, res) => {
     // const reg = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;
     // if (!reg.match(req.body.email)) return;
 
-    const msg = {
+    msg = {
       to: req.body.to,
       from: req.body.email,
       subject: "お問合せありがとうございました。",
@@ -34,7 +35,7 @@ const handler = (req, res) => {
     })();
   }
 
-  res.status(200);
+  res.status(200).json(msg);
 };
 
 // eslint-disable-next-line import/no-default-export
