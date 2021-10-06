@@ -26,6 +26,7 @@ const handler = (req, res) => {
     (async () => {
       try {
         await sgMail.send(msg);
+        res.status(200).json(msg);
       } catch (error) {
         console.error(error);
         if (error.response) {
