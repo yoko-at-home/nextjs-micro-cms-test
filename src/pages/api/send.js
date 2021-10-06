@@ -4,7 +4,7 @@ const handler = (req, res) => {
     sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY); //SendGridのAPIキー
 
     // validation logic
-    // const reg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/;
+    // const reg = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;
     // if (!reg.match(req.body.email)) return;
 
     const msg = {
@@ -12,13 +12,13 @@ const handler = (req, res) => {
       from: req.body.email,
       subject: "お問合せありがとうございました。",
       text:
-        "お問合せを受け付けました。\n回答をお待ちください。\n" +
+        "以下の内容でお問合せを受け付けました。回答をお待ちください。\n\n" +
         "お名前: " +
         req.body.name +
-        "様\n" +
+        " 様\n" +
         "メールアドレス: " +
         req.body.email +
-        "\nお問い合わせ内容: " +
+        "\n\nお問い合わせ内容:\n" +
         req.body.message,
     };
 

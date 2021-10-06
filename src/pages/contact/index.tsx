@@ -50,6 +50,7 @@ const Contact: NextPage = () => {
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   placeholder="お名前"
                   required
+                  minLength={3}
                 />
               </div>
               <div className="mb-3">
@@ -59,7 +60,7 @@ const Contact: NextPage = () => {
                   name="email"
                   type="email"
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                  placeholder="name@example.com"
+                  placeholder="送信可能なメールアドレス形式：name@example.com"
                   required
                 />
               </div>
@@ -71,6 +72,7 @@ const Contact: NextPage = () => {
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   rows={3}
                   required
+                  minLength={20}
                 ></textarea>
               </div>
               <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
