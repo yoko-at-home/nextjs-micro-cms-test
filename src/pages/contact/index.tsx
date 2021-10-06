@@ -15,7 +15,8 @@ const Contact: NextPage = () => {
 
     const res = await fetch("/api/send", {
       body: JSON.stringify({
-        to: process.env.NEXT_PUBLIC_SENDGRID_TO_ADDRESS,
+        // to: process.env.NEXT_PUBLIC_SENDGRID_TO_ADDRESS,
+        to: "yoko_iwasakijp@yahoo.co.jp",
         name: event.target.fullname.value,
         email: event.target.email.value,
         message: event.target.message.value,
