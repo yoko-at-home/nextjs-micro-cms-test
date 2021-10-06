@@ -35,7 +35,8 @@ const handler = (req, res) => {
     })();
   }
 
-  res.status(200).json(msg);
+  // res.status(200).json(msg);
+  res.status(200);
 };
 
 // eslint-disable-next-line import/no-default-export
