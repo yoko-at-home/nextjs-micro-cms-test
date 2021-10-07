@@ -20,7 +20,9 @@ const handler = (req, res) => {
         "メールアドレス: " +
         req.body.email +
         "\n\nお問い合わせ内容:\n" +
-        req.body.message,
+        req.body.message +
+        "\n\n\nメールの購読の希望: " +
+        req.body.newsletter,
     };
 
     (async () => {

@@ -19,6 +19,8 @@ const Contact: NextPage = () => {
         name: event.target.fullname.value,
         email: event.target.email.value,
         message: event.target.message.value,
+        newsletter:
+          event.target.newsletter.type === "checkbox" ? event.target.newsletter.checked : event.target.newsletter.value,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -79,6 +81,12 @@ const Contact: NextPage = () => {
                   required
                   minLength={20}
                 ></textarea>
+              </div>
+              <div className="flex my-6">
+                <label className="flex items-center">
+                  <input type="checkbox" id="newsletter" name="newsletter" className="form-checkbox" />
+                  <span className="ml-2 text-blueGray-500">メールの購読を希望 </span>
+                </label>
               </div>
               <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
