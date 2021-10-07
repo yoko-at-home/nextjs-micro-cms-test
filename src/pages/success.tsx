@@ -12,8 +12,11 @@ const Success: NextPage = () => {
     <LayoutAbout>
       <PageSEO title={`About- ${siteMetadata.author}`} description={siteMetadata.description} />
       <PageTitle>お問合せありがとうございます</PageTitle>
-      <div className="container p-3">
-        <div className="mt-10 whitespace-pre-line text-xl break-words">{router.query.text}</div>
+      <div className="container p-3 text-lg">
+        <div className="mt-10 whitespace-pre-line break-words">{router.query.text}</div>
+        <div className="mt-5 text-right">
+          <span className="text-xs text-gray-500"> true: 希望する / false: 希望しない</span>
+        </div>
       </div>
     </LayoutAbout>
   );

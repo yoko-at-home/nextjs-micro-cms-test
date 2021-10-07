@@ -21,7 +21,7 @@ const handler = (req, res) => {
         req.body.email +
         "\n\nお問い合わせ内容:\n" +
         req.body.message +
-        "\n\n\nメールの購読の希望: " +
+        "\n\n\nメール購読を希望: " +
         req.body.newsletter,
     };
 
