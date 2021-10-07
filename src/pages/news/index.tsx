@@ -5,7 +5,6 @@ import { PageTitle } from "src/components/PageTitle";
 import { Pagination } from "src/components/Pagination";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
-import { API_URL } from "src/lib/const";
 
 // eslint-disable-next-line react/destructuring-assignment
 const News = ({ news, totalCount }) => {
@@ -47,7 +46,7 @@ export const getStaticProps = async () => {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
-  const data = await fetch(`${API_URL}/news?offset=0&limit=3`, key)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news?offset=0&limit=3`, key)
     .then((res) => {
       return res.json();
     })

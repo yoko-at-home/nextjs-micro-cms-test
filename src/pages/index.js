@@ -3,14 +3,13 @@ import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
-import { API_URL } from "src/lib/const";
 
 export const getStaticProps = async () => {
   const key = {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
-  const data = await fetch(`${API_URL}/top`, key)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/top`, key)
     .then((res) => {
       return res.json();
     })

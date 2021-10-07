@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { LayoutHNewsArticles } from "src/components/layout";
 import { Pagination } from "src/components/Pagination";
-import { API_URL } from "src/lib/const";
 
 const PER_PAGE = 3;
 
@@ -45,7 +44,7 @@ export const getStaticPaths = async () => {
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
 
-  const res = await fetch(`${API_URL}/news`, key);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news`, key);
 
   const repos = await res.json();
 
@@ -70,7 +69,7 @@ export const getStaticProps = async (context) => {
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
 
-  const data = await fetch(`${API_URL}/news?offset=${(id - 1) * 3}&limit=3`, key)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news?offset=${(id - 1) * 3}&limit=3`, key)
     .then((res) => {
       return res.json();
     })
