@@ -21,7 +21,9 @@ const News = ({ news, totalCount }) => {
                   <Link href={`news/${news.id}`}>
                     <a className="ml-1 lg:ml-10 lg:w-3/12">
                       {!news.imgSrc ? null : (
-                        <Image src={news.imgSrc.url} alt={news.title} width="100%" height="100%" />
+                        <picture>
+                          <Image src={news.imgSrc.url} alt={news.title} width="150%" height="100%" />
+                        </picture>
                       )}
                     </a>
                   </Link>
