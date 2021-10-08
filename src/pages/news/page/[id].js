@@ -44,7 +44,7 @@ export const getStaticPaths = async () => {
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
 
-  const res = await fetch("https://gen-scent.microcms.io/api/v1/news", key);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news`, key);
 
   const repos = await res.json();
 
@@ -69,7 +69,7 @@ export const getStaticProps = async (context) => {
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
 
-  const data = await fetch(`https://gen-scent.microcms.io/api/v1/news?offset=${(id - 1) * 3}&limit=3`, key)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news?offset=${(id - 1) * 3}&limit=3`, key)
     .then((res) => {
       return res.json();
     })

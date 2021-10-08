@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
-  const data = await fetch("https://gen-scent.microcms.io/api/v1/top", key)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/top`, key)
     .then((res) => {
       return res.json();
     })

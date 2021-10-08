@@ -21,7 +21,9 @@ const News = ({ news, totalCount }) => {
                   <Link href={`news/${news.id}`}>
                     <a className="ml-1 lg:ml-10 lg:w-3/12">
                       {!news.imgSrc ? null : (
-                        <Image src={news.imgSrc.url} alt={news.title} width="100%" height="100%" />
+                        <picture>
+                          <Image src={news.imgSrc.url} alt={news.title} width="150%" height="100%" />
+                        </picture>
                       )}
                     </a>
                   </Link>
@@ -46,7 +48,7 @@ export const getStaticProps = async () => {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
-  const data = await fetch("https://gen-scent.microcms.io/api/v1/news?offset=0&limit=3", key)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news?offset=0&limit=3`, key)
     .then((res) => {
       return res.json();
     })
