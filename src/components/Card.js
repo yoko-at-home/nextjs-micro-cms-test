@@ -60,7 +60,7 @@ export const CardModal = ({ title, description, imgSrc, href }) => {
     <div className="p-4" style={{ maxWidth: "800px" }}>
       <div className="flex flex-col md:flex-row h-full overflow-hidden border-2 border-gray-200 rounded-md border-opacity-60 p-3">
         {href ? (
-          <Link href={href} aria-label={`Link to ${title}`} passHref>
+          <a target="_blank" href={href} aria-label={`Link to ${title}`} passHref rel="noreferrer">
             <Image
               alt={title}
               src={imgSrc}
@@ -68,7 +68,7 @@ export const CardModal = ({ title, description, imgSrc, href }) => {
               width={272}
               height={153}
             />
-          </Link>
+          </a>
         ) : (
           <Image
             alt={title}
