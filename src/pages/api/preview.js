@@ -11,7 +11,7 @@ export default async (req, res) => {
   }
   const content = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/news/${req.query.slug}?fields=id&draftKey=${req.query.draftKey}`,
-    { headers: { "X-API-KEY": process.env.apiKey || "" } }
+    { headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY || "" } }
   )
     .then((res) => res.json())
     // eslint-disable-next-line arrow-body-style
