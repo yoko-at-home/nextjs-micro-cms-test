@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export const Pagination = ({ totalCount }) => {
-  const PER_PAGE = 3;
+  const PER_PAGE = 5;
 
   const range = (start, end) => {
     return [...Array(end - start + 1)].map((_, i) => {
