@@ -73,7 +73,7 @@ export const HeaderSub: VFC = () => {
   );
 };
 
-export const HeaderAboout: VFC = () => {
+export const HeaderAbout: VFC = () => {
   return (
     <>
       <header className="h-60 bg-gray-500 opacity-70 relative">

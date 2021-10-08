@@ -1,6 +1,6 @@
 import type { ReactNode, VFC } from "react";
 import { Footer } from "src/components/footer";
-import { Header, HeaderAboout, HeaderNewsArticles, HeaderSub } from "src/components/header";
+import { Header, HeaderAbout, HeaderNewsArticles, HeaderSub } from "src/components/header";
 
 export const Layout: VFC<{ children: ReactNode }> = (props) => {
   return (
@@ -25,7 +25,7 @@ export const LayoutSub: VFC<{ children: ReactNode }> = (props) => {
 export const LayoutAbout: VFC<{ children: ReactNode }> = (props) => {
   return (
     <>
-      <HeaderAboout />
+      <HeaderAbout />
       <main className="mx-3 sm:mx-10 md:mx-auto w-11/12 lg:w-9/12">{props.children}</main>
       <Footer />
     </>
