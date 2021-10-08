@@ -73,7 +73,7 @@ export const getStaticProps = async (context) => {
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
 
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news?offset=${(id - 1) * 3}&limit=3`, key)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news?offset=${(id - 1) * 5}&limit=5`, key)
     .then((res) => {
       return res.json();
     })
