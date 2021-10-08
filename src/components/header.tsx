@@ -8,12 +8,14 @@ export const Header: VFC = () => {
   return (
     <>
       <header className="h-60 bg-gray-500 opacity-70 relative">
-        <Image
-          layout="fill"
-          className="object-center object-cover pointer-events-none"
-          src={"/static/images/laurel.png"}
-          alt={"text"}
-        />
+        <picture>
+          <Image
+            layout="fill"
+            className="object-center object-cover pointer-events-none"
+            src={"/static/images/laurel.png"}
+            alt={"text"}
+          />
+        </picture>
         <h1 className="absolute top-10 p-5 sm:left-10 md:top-14 lg:top-10 text-2xl sm:text-3xl text-white sm:whitespace-nowrap">
           <CustomLink href="/" aria-label="Gen-Scent Research Laboratory">
             <div className="flex items-center justify-between mb-8">
