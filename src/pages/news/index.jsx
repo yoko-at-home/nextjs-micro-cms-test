@@ -6,8 +6,14 @@ import { Pagination } from "src/components/Pagination";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
 
+// const ErrorPage = "エラーが発生しました";
+
 // eslint-disable-next-line react/destructuring-assignment
 const News = ({ news, totalCount }) => {
+  // console.log(content);
+  // if (!content) {
+  //   return ErrorPage;
+  // }
   return (
     <LayoutSub>
       <PageSEO title={`News- ${siteMetadata.author}`} description={siteMetadata.description} />

@@ -64,7 +64,7 @@ const Products = () => {
             })}
           </div>
           <Modal>
-            <div className="bg-white px-10 py-10 rounded">
+            <div className="bg-white px-2 sm:px-4 md:px-10 py-10 rounded">
               <h1 className="mt-5">会員登録がお済みのお客様は画像のタップからデータにアクセスできます。</h1>
               <p>
                 <CardModal
