@@ -24,3 +24,5 @@ https://sendgrid.kke.co.jp/blog/?p=14220&utm_source=google&utm_medium=cpc&utm_co
 https://codepen.io/componentity/pen/gOrLGwb
 
 https://github.com/vercel/next.js/blob/canary/examples/cms-wordpress/README.md
+
+https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/master/misc/autoplay/react?file=/src/styles.css
