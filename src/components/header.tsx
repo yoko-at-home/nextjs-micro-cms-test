@@ -139,12 +139,12 @@ export const HeaderNewsArticles: VFC = () => {
 export const HeaderCarousel: VFC = () => {
   return (
     <div className="relative">
-      <header className="h-60 bg-gray-500 opacity-70 relative">
+      <header className="h-60 bg-gray-500 opacity-70">
         <Carousel />
-        <div className="absolute -bottom-40 left-20">
-          <NavBarDesktop />
-        </div>
       </header>
+      <div className="absolute top-60 left-20">
+        <NavBarDesktop />
+      </div>
     </div>
   );
 };
