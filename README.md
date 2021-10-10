@@ -26,3 +26,5 @@ https://codepen.io/componentity/pen/gOrLGwb
 https://github.com/vercel/next.js/blob/canary/examples/cms-wordpress/README.md
 
 https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/master/misc/autoplay/react?file=/src/styles.css
+
+https://lottiefiles.com
