@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { VFC } from "react";
+import { Carousel } from "src/components/Carousel";
 import { CustomLink } from "src/components/CustomLink";
 import { NavBarDesktop, NavBarMobile } from "src/components/navbar";
 import { siteMetadata } from "src/data/siteMetadata";
@@ -132,5 +133,18 @@ export const HeaderNewsArticles: VFC = () => {
         </div>
       </header>
     </>
+  );
+};
+
+export const HeaderCarousel: VFC = () => {
+  return (
+    <div className="relative">
+      <header className="h-60 bg-gray-500 opacity-70 relative">
+        <Carousel />
+        <div className="absolute -bottom-40 left-20">
+          <NavBarDesktop />
+        </div>
+      </header>
+    </div>
   );
 };

@@ -1,6 +1,6 @@
 import type { ReactNode, VFC } from "react";
 import { Footer } from "src/components/footer";
-import { Header, HeaderAbout, HeaderNewsArticles, HeaderSub } from "src/components/header";
+import { Header, HeaderAbout, HeaderCarousel, HeaderNewsArticles, HeaderSub } from "src/components/header";
 
 export const Layout: VFC<{ children: ReactNode }> = (props) => {
   return (
@@ -38,5 +38,14 @@ export const LayoutHNewsArticles: VFC<{ children: ReactNode }> = (props) => {
       <main className="mx-3 sm:mx-10 md:mx-auto w-11/12 lg:w-9/12">{props.children}</main>
       <Footer />
     </>
+  );
+};
+export const LayoutCarousel: VFC<{ children: ReactNode }> = (props) => {
+  return (
+    <div className="w-screen">
+      <HeaderCarousel />
+      <main className="mt-60 mx-3 sm:mx-10 md:mx-auto w-11/12 lg:w-9/12">{props.children}</main>
+      <Footer />
+    </div>
   );
 };

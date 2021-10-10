@@ -11,6 +11,7 @@ const items = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/members", label: "Memebers" },
+  { href: "/showcase", label: "Showcase" },
 ];
 
 export const NavBarDesktop: VFC = () => {
