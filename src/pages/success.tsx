@@ -11,7 +11,7 @@ const Success: NextPage = () => {
   // console.log(router.query);
   return (
     <LayoutAbout>
-      <PageSEO title={`About- ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageSEO title={`Success- ${siteMetadata.author}`} description={siteMetadata.description} />
       <PageTitle>お問合せありがとうございます</PageTitle>
       <div className="flex justify-center">
         <img alt="cats" src={"/static/74797-thank-you-with-confetti.gif"} className="rounded-full w-20 md:w-56" />
