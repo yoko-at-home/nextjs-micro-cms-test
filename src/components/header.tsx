@@ -41,18 +41,16 @@ export const Header: VFC = () => {
 };
 
 const imgSrc = "https://source.unsplash.com/1600x500/?nature,water";
-const imgSrcFlower = "https://source.unsplash.com/random/1600x500/?flower,nature";
-
 export const HeaderSub: VFC = () => {
   return (
     <>
       <header className="h-60 bg-gray-500 opacity-70 relative">
         <Image layout="fill" className="object-center object-cover pointer-events-none" src={imgSrc} alt={"text"} />
-        <h1 className="absolute top-10 p-5 sm:left-10 md:top-14 text-2xl sm:text-3xl text-white sm:whitespace-nowrap">
+        <h1 className="absolute top-10 p-5 sm:left-10 md:top-14 lg:top-10 text-2xl sm:text-3xl text-white sm:whitespace-nowrap">
           <CustomLink href="/" aria-label="Gen-Scent Research Laboratory">
             <div className="flex items-center justify-between mb-8">
               {typeof siteMetadata.headerTitle === "string" ? (
-                <div className="h-6 text-2xl lg:text-5xl md:text-3xl font-semibold my-6 md:mb-20 md:mt-12 text-center md:whitespace-nowrap">
+                <div className="h-6 text-2xl lg:text-4xl md:text-3xl font-semibold my-6 md:mb-20 md:mt-12 text-center md:whitespace-nowrap">
                   {siteMetadata.headerTitle}
                 </div>
               ) : (
@@ -73,6 +71,7 @@ export const HeaderSub: VFC = () => {
   );
 };
 
+const imgSrcFlower = "https://source.unsplash.com/random/1600x500/?flower,nature";
 export const HeaderAbout: VFC = () => {
   return (
     <>
@@ -83,11 +82,11 @@ export const HeaderAbout: VFC = () => {
           src={imgSrcFlower}
           alt={"text"}
         />
-        <h1 className="absolute top-10 p-5 sm:left-10 md:top-14 text-2xl sm:text-3xl text-white sm:whitespace-nowrap">
+        <h1 className="absolute top-10 p-5 sm:left-10 md:top-14 lg:top-10 text-2xl sm:text-3xl text-white sm:whitespace-nowrap">
           <CustomLink href="/" aria-label="Gen-Scent Research Laboratory">
             <div className="flex items-center justify-between mb-8">
               {typeof siteMetadata.headerTitle === "string" ? (
-                <div className="h-6 text-2xl lg:text-5xl md:text-3xl font-semibold my-6 md:mb-20 md:mt-12 text-center md:whitespace-nowrap">
+                <div className="h-6 text-2xl lg:text-4xl md:text-3xl font-semibold my-6 md:mb-20 md:mt-12 text-center md:whitespace-nowrap">
                   {siteMetadata.headerTitle}
                 </div>
               ) : (

@@ -67,7 +67,7 @@ const Contact: NextPage = () => {
                   name="email"
                   type="email"
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                  placeholder="送信可能なメールアドレス形式：name@example.com"
+                  placeholder="送信可能な形式：name@example.com"
                   autoComplete="email"
                   required
                 />
