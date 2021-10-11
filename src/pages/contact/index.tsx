@@ -20,8 +20,8 @@ const Contact: NextPage = () => {
         email: event.target.email.value,
         message: event.target.message.value,
         newsletter:
-          // event.target.newsletter.type === "checkbox" ? event.target.newsletter.checked : event.target.newsletter.value,
-          event.target.newsletter.type === "checkbox" ? "はい" : "いいえ",
+          event.target.newsletter.type === "checkbox" ? event.target.newsletter.checked : event.target.newsletter.value,
+        // event.target.newsletter.type === "checkbox" ? "はい" : "いいえ",
       }),
       headers: {
         "Content-Type": "application/json",
