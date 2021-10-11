@@ -23,19 +23,27 @@ const Members: NextPage = () => {
                   Webサイトのすべての商品情報にアクセスするには、会員登録をお願いしております。以下のログインリンクからメールアドレスを認証して、会員登録の申請をお願いします。
                 </p>
               </div>
-              <Link href="/api/auth/login">
-                <a className="mb-5 p-5 bg-gray-300">Login</a>
-              </Link>
+              <div className="flex justify-center">
+                <Link href="/api/auth/login">
+                  <a className="mb-5 py-3 px-10 text-gray-300 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 rounded tracking-widest">
+                    Login
+                  </a>
+                </Link>
+              </div>
             </div>
           ) : (
             <>
               <div className="flex justify-between">
                 <Link href="/api/auth/logout">
-                  <a className="p-5 bg-gray-300">Logout</a>
+                  <a className="mb-5 py-3 px-10 text-gray-300 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 rounded tracking-widest">
+                    Logout
+                  </a>
                 </Link>
 
                 <Link href="/members/profile">
-                  <a className="p-5 bg-gray-300">プロフィール</a>
+                  <a className="mb-5 py-3 px-10 text-gray-300 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 rounded tracking-widest">
+                    プロフィール
+                  </a>
                 </Link>
               </div>
               メンバー登録のコンポーネントをここにインポート
