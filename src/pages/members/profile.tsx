@@ -7,7 +7,12 @@ import { LayoutSub } from "src/components/layout";
 export default function Profile() {
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading)
+    return (
+      <div className=" flex justify-center items-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500">Loading...</div>
+      </div>
+    );
   if (error)
     return (
       <LayoutSub>
