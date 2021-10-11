@@ -4,6 +4,13 @@ module.exports = {
   typescript: { ignoreDevErrors: true },
   poweredByHeader: false,
   images: {
-    domains: ["images.unsplash.com", "source.unsplash.com", "unsplash.com", "images.microcms-assets.io"],
+    domains: [
+      "images.unsplash.com",
+      "source.unsplash.com",
+      "unsplash.com",
+      "images.microcms-assets.io",
+      "lh3.googleusercontent.com",
+      "s.gravatar.com",
+    ],
   },
 };
