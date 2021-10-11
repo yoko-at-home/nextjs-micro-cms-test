@@ -8,7 +8,12 @@ export default function Profile() {
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
+  if (error)
+    return (
+      <LayoutSub>
+        <div>{error.message}</div>
+      </LayoutSub>
+    );
 
   return (
     user && (
@@ -21,17 +26,13 @@ export default function Profile() {
                   <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                     <div className="relative">
                       <div>
-                        {!user.picture ? (
-                          <div className="w-25 h-25 bg-gray-400 rounded-full"></div>
-                        ) : (
-                          <Image
-                            className="rounded-full"
-                            src={user.picture as string}
-                            alt={user.name as string}
-                            width={70}
-                            height={70}
-                          />
-                        )}
+                        <Image
+                          className="rounded-full"
+                          src={user.picture as string}
+                          alt={user.name as string}
+                          width={70}
+                          height={70}
+                        />
                       </div>
                     </div>
                   </div>
