@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-// import { SubmitHandler, useForm } from "react-hook-form";
+import { useState } from "react";
 import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
@@ -10,6 +10,14 @@ import { siteMetadata } from "src/data/siteMetadata";
 
 const Contact: NextPage = () => {
   const router = useRouter();
+  const [checkboxState, setCheckboxState] = useState(false);
+
+  const handleOnChange = () => {
+    setCheckboxState((prevCheck) => {
+      return !prevCheck;
+    });
+  };
+
   const handleRegisterUser = async (event: any) => {
     event.preventDefault();
 
@@ -19,9 +27,8 @@ const Contact: NextPage = () => {
         name: event.target.fullname.value,
         email: event.target.email.value,
         message: event.target.message.value,
-        newsletter:
-          event.target.newsletter.type === "checkbox" ? event.target.newsletter.checked : event.target.newsletter.value,
-        // event.target.newsletter.type === "checkbox" ? "はい" : "いいえ",
+        newsletter: checkboxState === true ? "はい" : "いいえ",
+        // event.target.newsletter.type === "checkbox" ? event.target.newsletter.checked : event.target.newsletter.value,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -35,6 +42,7 @@ const Contact: NextPage = () => {
       query: result,
     });
   };
+
   return (
     <Layout>
       <PageSEO title={`Contact- ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -85,7 +93,14 @@ const Contact: NextPage = () => {
               </div>
               <div className="flex my-6">
                 <label className="flex items-center">
-                  <input type="checkbox" id="newsletter" name="newsletter" className="form-checkbox" />
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    name="newsletter"
+                    className="form-checkbox"
+                    onChange={handleOnChange}
+                    checked={checkboxState}
+                  />
                   <span className="ml-2 text-blueGray-500">メールの購読を希望 </span>
                 </label>
               </div>
