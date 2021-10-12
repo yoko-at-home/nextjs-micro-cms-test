@@ -12,7 +12,7 @@ const Success: NextPage = () => {
   return (
     <LayoutAbout>
       <PageSEO title={`Success- ${siteMetadata.author}`} description={siteMetadata.description} />
-      <PageTitle>お問合せありがとうございます</PageTitle>
+      <PageTitle>{router.query.subject}</PageTitle>
       <div className="flex justify-center">
         <img alt="cats" src={"/static/74797-thank-you-with-confetti.gif"} className="rounded-full w-20 md:w-56" />
         <img alt="cats" src={"/static/43018-thank-you-lottiefiles.gif"} className="rounded-full w-20 md:w-56" />
