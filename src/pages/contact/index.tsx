@@ -21,14 +21,23 @@ const Contact: NextPage = () => {
   const handleRegisterUser = async (event: any) => {
     event.preventDefault();
 
+    const newsletter = checkboxState === true ? "はい" : "いいえ";
     const res = await fetch("/api/send", {
       body: JSON.stringify({
+        subject: "お問合せありがとうございました。",
         to: process.env.NEXT_PUBLIC_SENDGRID_TO_ADDRESS,
-        name: event.target.fullname.value,
+        text:
+          "以下の内容でお問合せを受け付けました。回答をお待ちください。\n\n" +
+          "お名前: " +
+          event.target.fullname.value +
+          " 様" +
+          "\nメールアドレス: " +
+          event.target.email.value +
+          "\n\nお問い合わせ内容:\n" +
+          event.target.message.value +
+          "\n\n\nメール購読を希望: " +
+          newsletter,
         email: event.target.email.value,
-        message: event.target.message.value,
-        newsletter: checkboxState === true ? "はい" : "いいえ",
-        // event.target.newsletter.type === "checkbox" ? event.target.newsletter.checked : event.target.newsletter.value,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +116,7 @@ const Contact: NextPage = () => {
               <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
                   type="submit"
-                  value="contact"
+                  name="contact"
                   className="font-medium shadow-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-offset-2 border border-gray-50  bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-700 focus:to-yellow-400 rounded-md text-gray-200"
                 >
                   送信
