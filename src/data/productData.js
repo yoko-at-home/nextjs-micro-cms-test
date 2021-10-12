@@ -15,19 +15,19 @@ export const productData = [
     title: "質量スペクトルライブラリ",
     description: `各メーカーのGC-MSデータ形式を変換するソフトウェアです。共通ソフトウェアで解析する場合に便利です。`,
     imgSrc: "/static/images/time-machine.jpg",
-    href: "/members",
+    href: "https://docs.google.com/document/d/1XazSunlTurccu4_QlJ13-zfcBo5I9_G_SzNMsvLc1Bw/edit?usp=sharing",
   },
   {
     title: "データ形式変換ソフトウェア",
     description: `精油香料 食品中揮発成分 脂肪酸エステル 生理活性物質 農薬 生物 ・ 環境中物質 薬物など各分野のライブラリを取り揃えております。`,
     imgSrc: "/static/images/time-machine.jpg",
-    href: "/members",
+    href: "https://docs.google.com/document/d/1XazSunlTurccu4_QlJ13-zfcBo5I9_G_SzNMsvLc1Bw/edit?usp=sharing",
   },
   {
     title: "香気成分の化学特性 シミュレーションソフトウェア",
     description: `ハンブルグ大学のWilfried A. König教授、ロベルテ社、およびHoch化合物の構造から化学特性を推定する ソフトウェアです。においの閾（いき）値などを予測します。muth博士により監修されたライブラリ付ソフトウェアです。`,
     imgSrc: "/static/images/laurel.png",
-    href: "/members",
+    href: "https://docs.google.com/document/d/1XazSunlTurccu4_QlJ13-zfcBo5I9_G_SzNMsvLc1Bw/edit?usp=sharing",
   },
   {
     title: "香気成分ライブラリ 解析ソフトウェア",

@@ -47,7 +47,7 @@ export const Card = ({ title, description, imgSrc, href }) => {
               className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 "
               aria-label={`Link to ${title}`}
             >
-              会員登録いただくと、製品詳細をご覧いただくことができます。&rarr;
+              {title}詳細 &rarr;&rarr;&rarr;
             </Link>
           )}
         </div>
@@ -92,13 +92,15 @@ export const CardModal = ({ title, description, imgSrc, href }) => {
             {description}
           </p>
           {href && (
-            <Link
+            <a
+              target="_blank"
               href={href}
               className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 "
               aria-label={`Link to ${title}`}
+              rel="noreferrer"
             >
-              会員登録いただくと、製品詳細をご覧いただくことができます。&rarr;
-            </Link>
+              {title}詳細 &rarr;&rarr;&rarr;
+            </a>
           )}
         </div>
       </div>
