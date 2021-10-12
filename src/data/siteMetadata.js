@@ -7,7 +7,7 @@ export const siteMetadata = {
   siteUrl: "https://www.gen-scent.com",
   siteRepo: "https://www.gen-scent.com",
   siteLogo: "/static/images/logo.png",
-  image: "/static/images/avatar.png",
+  image: "/static/images/laurel.png",
   socialBanner: "/static/images/twitter-card.png",
   email: "tech＠gen-scent.com",
   github: "https://github.com",
