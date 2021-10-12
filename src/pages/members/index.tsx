@@ -25,14 +25,15 @@ const Members: NextPage = () => {
 
   const handleRegisterUser = async (event: any) => {
     event.preventDefault();
-    const useremail = user.email as string;
+    // const useremail = user.email as string;
 
     const res = await fetch("/api/send", {
       body: JSON.stringify({
         to: process.env.NEXT_PUBLIC_SENDGRID_TO_ADDRESS_REGI,
         name: event.target.fullname.value,
         labo: event.target.labo.value,
-        email: useremail,
+        // email: useremail,
+        email: event.target.email.value,
         message: event.target.message.value,
         newsletter: checkboxState === true ? "はい" : "いいえ",
       }),
@@ -113,21 +114,21 @@ const Members: NextPage = () => {
                           name="labo"
                           type="text"
                           className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                          placeholder="研究室"
+                          placeholder=""
                           required
                         />
                       </div>
                       <div className="mb-3">
                         <label htmlFor="email">メールアドレス：{user.email}</label>
-                        {/* <input
+                        <input
                           id="email"
                           name="email"
                           type="email"
                           className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                          // placeholder={user.email as string}
-                          autoComplete={user.email as string}
+                          placeholder={user.email as string}
+                          autoComplete="email"
                           required
-                        /> */}
+                        />
                       </div>
                       <div className="mb-3">
                         <label htmlFor="message">問合せ内容</label>
