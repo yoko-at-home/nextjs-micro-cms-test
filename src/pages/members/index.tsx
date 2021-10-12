@@ -2,6 +2,7 @@
 import type { NextPage } from "next";
 // import { Carousel } from "src/components/Carousel";
 import { Layout } from "src/components/layout";
+import { MemberRegi } from "src/components/MemberRegi";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
@@ -16,7 +17,7 @@ const Members: NextPage = () => {
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <p className="text-lg leading-7 text-gray-500 ">会員登録ページです。</p>
         </div>
-        <div className="container py-12">{/* <Carousel /> */}</div>
+        <MemberRegi />
       </div>
     </Layout>
   );
