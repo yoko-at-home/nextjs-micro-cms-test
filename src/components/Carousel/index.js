@@ -41,11 +41,11 @@ export const Carousel = () => {
   return (
     <>
       <div ref={sliderRef} className="keen-slider">
-        <div className="keen-slider__slide number-slide1">Nature</div>
-        <div className="keen-slider__slide number-slide2">Water</div>
+        <div className="keen-slider__slide number-slide1">Cats</div>
+        <div className="keen-slider__slide number-slide2">Birds</div>
         <div className="keen-slider__slide number-slide3">Flower</div>
-        <div className="keen-slider__slide number-slide4">Architecture</div>
-        <div className="keen-slider__slide number-slide5">Chemistry</div>
+        <div className="keen-slider__slide number-slide4">Dogs</div>
+        <div className="keen-slider__slide number-slide5">Maincoon</div>
         <div className="keen-slider__slide number-slide6">Winter</div>
       </div>
       <style jsx>{`
@@ -57,24 +57,24 @@ export const Carousel = () => {
           font-size: 50px;
           color: #fff;
           font-weight: 500;
-          height: 50vh;
+          height: 60vh;
           max-height: 100vh;
           border-radius: 5px;
         }
         .number-slide1 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?nature");
+          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?cats");
         }
         .number-slide2 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?water");
+          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?birds");
         }
         .number-slide3 {
           background: center/cover no-repeat url("https://source.unsplash.com/500x500/?flower");
         }
         .number-slide4 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?architecture");
+          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?dogs");
         }
         .number-slide5 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?chemistry");
+          background: top/cover no-repeat url("https://source.unsplash.com/500x500/?maincoon");
         }
         .number-slide6 {
           background: center/cover no-repeat url("https://source.unsplash.com/500x500/?winter");
