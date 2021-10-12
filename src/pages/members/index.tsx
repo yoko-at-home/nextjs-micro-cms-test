@@ -24,9 +24,9 @@ const Members: NextPage = () => {
                   Webサイトのすべての商品情報にアクセスするには、会員登録をお願いしております。以下のログインリンクからメールアドレスを認証して、会員登録の申請をお願いします。
                 </p>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-end">
                 <Link href="/api/auth/login">
-                  <a className="mb-5 py-3 px-10 text-gray-300 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 rounded tracking-widest">
+                  <a className="mb-5 py-1 px-5 text-gray-300 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 rounded tracking-widest">
                     Login
                   </a>
                 </Link>
@@ -34,9 +34,9 @@ const Members: NextPage = () => {
             </div>
           ) : (
             <>
-              <div className="flex justify-between">
+              <div className="flex justify-end">
                 <Link href="/api/auth/logout">
-                  <a className="mb-5 py-3 px-10 text-gray-300 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 rounded tracking-widest">
+                  <a className="mb-5 py-1 px-5 text-gray-300 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 rounded tracking-widest">
                     Logout
                   </a>
                 </Link>
