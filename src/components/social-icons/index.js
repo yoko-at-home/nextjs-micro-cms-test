@@ -1,9 +1,10 @@
-import Mail from "./mail.svg";
-import Github from "./github.svg";
+/* eslint-disable react/destructuring-assignment */
 import Facebook from "./facebook.svg";
-import Youtube from "./youtube.svg";
+import Github from "./github.svg";
 import Linkedin from "./linkedin.svg";
+import Mail from "./mail.svg";
 import Twitter from "./twitter.svg";
+import Youtube from "./youtube.svg";
 
 // Icons taken from: https://simpleicons.org/
 
@@ -16,7 +17,7 @@ const components = {
   twitter: Twitter,
 };
 
-const SocialIcon = ({ kind, href, size = 8 }) => {
+export const SocialIcon = ({ kind, href, size = 8 }) => {
   if (!href) return null;
 
   const SocialSvg = components[kind];
@@ -35,5 +36,3 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
     </a>
   );
 };
-
-export default SocialIcon;
