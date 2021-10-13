@@ -1,7 +1,7 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 import Link from "next/link";
-import { LayoutSub } from "src/components/layout";
+import { Layout } from "src/components/layout";
 // import { PageTitle } from "src/components/PageTitle";
 
 export default function Profile() {
@@ -15,14 +15,14 @@ export default function Profile() {
     );
   if (error)
     return (
-      <LayoutSub>
+      <Layout theme="main">
         <div>{error.message}</div>
-      </LayoutSub>
+      </Layout>
     );
 
   return (
     user && (
-      <LayoutSub>
+      <Layout theme="main">
         <section className="mt-72 py-16 bg-gray-600">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
@@ -59,7 +59,7 @@ export default function Profile() {
             </div>
           </div>
         </section>
-      </LayoutSub>
+      </Layout>
     )
   );
 }

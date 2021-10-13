@@ -3,7 +3,7 @@
 /* eslint-disable import/no-default-export */
 import Image from "next/image";
 import Link from "next/link";
-import { LayoutHNewsArticles } from "src/components/layout";
+import { Layout } from "src/components/layout";
 import { Pagination } from "src/components/Pagination";
 
 const PER_PAGE = 3;
@@ -11,7 +11,7 @@ const PER_PAGE = 3;
 // pages/news/[id].js
 export default function NewsPageId({ news, totalCount }) {
   return (
-    <LayoutHNewsArticles>
+    <Layout theme="newsArticles">
       <ul className="mt-10">
         {news.map((news) => {
           return (
@@ -38,7 +38,7 @@ export default function NewsPageId({ news, totalCount }) {
         })}
       </ul>
       <Pagination totalCount={totalCount} />
-    </LayoutHNewsArticles>
+    </Layout>
   );
 }
 

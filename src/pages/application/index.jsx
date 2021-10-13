@@ -78,7 +78,7 @@ const AppCard = (props) => {
 // const Application: NextPage<ItemType> = () => {
 const Application = (props) => {
   return (
-    <Layout>
+    <Layout theme="main">
       <PageSEO title={`Application- ${siteMetadata.author}`} description={siteMetadata.description} />
 
       <PageTitle>Application</PageTitle>

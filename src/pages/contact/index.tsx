@@ -51,7 +51,7 @@ const Contact: NextPage = () => {
   };
 
   return (
-    <Layout>
+    <Layout theme="main">
       <PageSEO title={`Contact- ${siteMetadata.author}`} description={siteMetadata.description} />
 
       <PageTitle>Contact</PageTitle>
