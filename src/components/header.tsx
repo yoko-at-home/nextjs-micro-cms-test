@@ -1,3 +1,4 @@
+import cc from "classcat";
 import Image from "next/image";
 import type { VFC } from "react";
 import { Carousel } from "src/components/Carousel";
@@ -7,6 +8,7 @@ import { siteMetadata } from "src/data/siteMetadata";
 
 type Props = {
   className?: string;
+  type?: "main" | "sub" | "news" | "flower" | "newsArticles";
   theme?: "main" | "sub" | "news" | "flower" | "newsArticles";
 };
 
@@ -21,7 +23,15 @@ export const Header: VFC<Props> = (props) => {
 
   return (
     <>
-      <header className="h-60 bg-gray-500 opacity-70 relative">
+      <header
+        className={cc([
+          "h-60 bg-gray-500 relative",
+          {
+            "opacity-70": props.type === "main",
+            "opacity-100": props.type !== "main",
+          },
+        ])}
+      >
         <Image
           layout="fill"
           className="object-center object-cover pointer-events-none"
