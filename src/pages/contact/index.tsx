@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -10,10 +8,10 @@ import { siteMetadata } from "src/data/siteMetadata";
 
 const Contact: NextPage = () => {
   const router = useRouter();
-  const [checkboxState, setCheckboxState] = useState(false);
+  const [isCheckboxState, setIsCheckboxState] = useState(false);
 
   const handleOnChange = () => {
-    setCheckboxState((prevCheck) => {
+    setIsCheckboxState((prevCheck) => {
       return !prevCheck;
     });
   };
@@ -21,7 +19,7 @@ const Contact: NextPage = () => {
   const handleRegisterUser = async (event: any) => {
     event.preventDefault();
 
-    const newsletter = checkboxState === true ? "はい" : "いいえ";
+    const newsletter = isCheckboxState === true ? "はい" : "いいえ";
     const res = await fetch("/api/send", {
       body: JSON.stringify({
         subject: "お問合せありがとうございました。",
@@ -40,7 +38,7 @@ const Contact: NextPage = () => {
         email: event.target.email.value,
       }),
       headers: {
-        "Content-Type": "application/json",
+        contentType: "application/json",
       },
       method: "POST",
     });
@@ -108,7 +106,7 @@ const Contact: NextPage = () => {
                     name="newsletter"
                     className="form-checkbox"
                     onChange={handleOnChange}
-                    checked={checkboxState}
+                    checked={isCheckboxState}
                   />
                   <span className="ml-2 text-blueGray-500">メールの購読を希望 </span>
                 </label>
