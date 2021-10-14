@@ -1,6 +1,8 @@
 import type { ReactNode, VFC } from "react";
+import { Carousel } from "src/components/Carousel";
 import { Footer } from "src/components/footer";
-import { Header, HeaderCarousel } from "src/components/header";
+import { Header } from "src/components/header";
+import { NavBarMobile } from "src/components/navbar";
 
 type Props = {
   className?: string;
@@ -12,18 +14,18 @@ export const Layout: VFC<Props> = (props) => {
   return (
     <>
       <Header theme={props.theme || "main"} />
-      <main className="mx-3 sm:mx-10 md:mx-auto md:w-11/12 lg:w-9/12 bg-purple-50 bg-opacity-0">{props.children}</main>
+      <main className="mx-3 sm:mx-10 md:mx-auto md:w-11/12 lg:w-9/12">{props.children}</main>
       <Footer />
     </>
   );
 };
 
-export const LayoutCarousel: VFC<{ children: ReactNode }> = (props) => {
+export const LayoutCarousel: VFC<Props> = (props) => {
   return (
-    <div className="w-screen">
-      <HeaderCarousel />
-      <main className="mt-60 mx-3 sm:mx-10 md:mx-auto w-11/12 lg:w-9/12">{props.children}</main>
-      <Footer />
+    <div className="relative">
+      <Carousel />
+      <main className="absolute top-20 text-white text-xl leading-7 uppercase">{props.children}</main>
+      <NavBarMobile />
     </div>
   );
 };

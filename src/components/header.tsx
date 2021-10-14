@@ -1,7 +1,6 @@
 import cc from "classcat";
 import Image from "next/image";
 import type { VFC } from "react";
-import { Carousel } from "src/components/Carousel";
 import { CustomLink } from "src/components/CustomLink";
 import { NavBarDesktop, NavBarMobile } from "src/components/navbar";
 import { siteMetadata } from "src/data/siteMetadata";
@@ -25,9 +24,9 @@ export const Header: VFC<Props> = (props) => {
     <>
       <header
         className={cc([
-          "h-60 bg-gray-500 relative",
+          "h-60 relative",
           {
-            "opacity-70": props.type === "main",
+            "bg-gray-500 bg-opacity-70": props.type === "main",
             "opacity-100": props.type !== "main",
           },
         ])}
@@ -57,21 +56,8 @@ export const Header: VFC<Props> = (props) => {
           </CustomLink>
         </div>
         {props.theme !== "newsArticles" && <NavBarDesktop />}
+        {props.theme !== "newsArticles" && <NavBarMobile />}
       </header>
-      {props.theme !== "newsArticles" && <NavBarMobile />}
     </>
-  );
-};
-
-export const HeaderCarousel: VFC = () => {
-  return (
-    <div className="relative">
-      <header className="h-60 bg-gray-500 opacity-70">
-        <Carousel />
-      </header>
-      <div className="absolute top-60 left-20">
-        <NavBarDesktop />
-      </div>
-    </div>
   );
 };
