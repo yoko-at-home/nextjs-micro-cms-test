@@ -24,7 +24,7 @@ const Contact: NextPage = () => {
     const res = await fetch("/api/send", {
       body: JSON.stringify({
         subject: "お問合せありがとうございました。",
-        to: process.env.NEXT_PUBLIC_SENDGRID_TO_ADDRESS,
+        to: siteMetadata.email,
         text:
           "以下の内容でお問合せを受け付けました。回答をお待ちください。\n\n" +
           "お名前: " +

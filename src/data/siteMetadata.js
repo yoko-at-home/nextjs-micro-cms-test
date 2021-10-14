@@ -9,7 +9,7 @@ export const siteMetadata = {
   siteLogo: "/static/images/logo.png",
   image: "/static/images/laurel.png",
   socialBanner: "/static/images/twitter-card.png",
-  email: "yoko.iwasaki8@gmail.com",
+  email: "yoko_iwasakijp@yahoo.co.jp",
   github: "https://github.com/yoko-at-home",
   twitter: "https://twitter.com/Twitter/yokoiwasaki6",
   facebook: "https://facebook.com",

@@ -30,7 +30,7 @@ const Members: NextPage = () => {
     const res = await fetch("/api/send", {
       body: JSON.stringify({
         subject: "会員登録のお申し込みを受け付けました",
-        to: process.env.NEXT_PUBLIC_SENDGRID_TO_ADDRESS,
+        to: siteMetadata.email,
         text:
           "以下の内容でお申し込みを受け付けました。回答をお待ちください。\n\n" +
           "お名前: " +
