@@ -4,7 +4,7 @@ import { Header, HeaderCarousel } from "src/components/header";
 
 type Props = {
   className?: string;
-  theme?: "main" | "sub" | "news" | "newsArticles";
+  theme?: "main" | "sub" | "news" | "flower" | "newsArticles";
   children: ReactNode;
 };
 
