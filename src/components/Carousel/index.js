@@ -41,12 +41,13 @@ export const Carousel = () => {
   return (
     <>
       <div ref={sliderRef} className="keen-slider">
-        <div className="keen-slider__slide number-slide1">Cats</div>
-        <div className="keen-slider__slide number-slide2">Birds</div>
-        <div className="keen-slider__slide number-slide3">Flower</div>
-        <div className="keen-slider__slide number-slide4">Dogs</div>
-        <div className="keen-slider__slide number-slide5">Maincoon</div>
-        <div className="keen-slider__slide number-slide6">Winter</div>
+        <div className="keen-slider__slide number-slide1"></div>
+        <div className="keen-slider__slide number-slide2"></div>
+        <div className="keen-slider__slide number-slide3"></div>
+        <div className="keen-slider__slide number-slide4"></div>
+        <div className="keen-slider__slide number-slide5"></div>
+        <div className="keen-slider__slide number-slide6"></div>
+        <div className="keen-slider__slide number-slide7"></div>
       </div>
       <style jsx>{`
         [class^="number-slide"],
@@ -57,27 +58,30 @@ export const Carousel = () => {
           font-size: 50px;
           color: #fff;
           font-weight: 500;
-          height: 60vh;
+          height: 100vh;
           max-height: 100vh;
           border-radius: 5px;
         }
         .number-slide1 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?cats");
+          background: center/cover no-repeat url("https://source.unsplash.com/500x800/?cats");
         }
         .number-slide2 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?birds");
+          background: center/cover no-repeat url("https://source.unsplash.com/500x800/?spring,maincoon");
         }
         .number-slide3 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?flower");
+          background: center/cover no-repeat url("https://source.unsplash.com/500x800/?maincoon,cat");
         }
         .number-slide4 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?dogs");
+          background: center/cover no-repeat url("https://source.unsplash.com/500x800/?winter,cats");
         }
         .number-slide5 {
-          background: top/cover no-repeat url("https://source.unsplash.com/500x500/?maincoon");
+          background: top/cover no-repeat url("https://source.unsplash.com/500x800/?cats,maincoon");
         }
         .number-slide6 {
-          background: center/cover no-repeat url("https://source.unsplash.com/500x500/?winter");
+          background: center/cover no-repeat url("https://source.unsplash.com/500x800/?kitten");
+        }
+        .number-slide7 {
+          background: center/cover no-repeat url("https://source.unsplash.com/500x800/?autumn");
         }
       `}</style>
     </>
