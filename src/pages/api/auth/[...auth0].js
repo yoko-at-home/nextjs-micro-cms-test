@@ -7,9 +7,4 @@ export default handleAuth({
       returnTo: "/members",
     });
   },
-  async logout(req, res) {
-    await handleLogin(req, res, {
-      returnTo: "/members",
-    });
-  },
 });
