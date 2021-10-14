@@ -11,8 +11,12 @@ const Showcase: NextPage = () => {
     <LayoutCarousel>
       <PageSEO title={`Showcase- ${siteMetadata.author}`} description={siteMetadata.description} />
       <CustomLink href="/showcase" aria-label="Gen-Scent Research Laboratory">
-        <div className="absolute md:-top-20 right-5 bg-gradient-to-t from-gray-700 to-green-50 rounded-full p-2">
-          <img alt="cats" src={"/static/animation_500_cat.gif"} className="rounded-full w-16 md:w-32" />
+        <div className="absolute -top-5 md:-top-20 right-5 bg-gradient-to-t from-gray-700 to-green-50 rounded-full p-3">
+          <img
+            alt="cats"
+            src={"/static/animation_500_cat.gif"}
+            className="rounded-full w-16 md:w-24 transform rotate-12"
+          />
         </div>
       </CustomLink>
 
