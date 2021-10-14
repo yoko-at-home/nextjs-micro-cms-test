@@ -13,11 +13,11 @@ import { siteMetadata } from "src/data/siteMetadata";
 const Members: NextPage = () => {
   const { user } = useUser();
   const router = useRouter();
-  const [checkboxState, setCheckboxState] = useState(false);
+  const [isCheckboxState, setIsCheckboxState] = useState(false);
   // console.log(user);
 
   const handleOnChange = () => {
-    setCheckboxState((prevCheck) => {
+    setIsCheckboxState((prevCheck) => {
       return !prevCheck;
     });
   };
@@ -26,7 +26,7 @@ const Members: NextPage = () => {
     event.preventDefault();
     const useremail = user?.email || "";
 
-    const newsletter = checkboxState === true ? "はい" : "いいえ";
+    const newsletter = isCheckboxState === true ? "はい" : "いいえ";
     const res = await fetch("/api/send", {
       body: JSON.stringify({
         subject: "会員登録のお申し込みを受け付けました",
@@ -149,7 +149,7 @@ const Members: NextPage = () => {
                             name="newsletter"
                             className="form-checkbox"
                             onChange={handleOnChange}
-                            checked={checkboxState}
+                            checked={isCheckboxState}
                           />
                           <span className="ml-2 text-blueGray-500">メールの購読を希望 </span>
                         </label>
