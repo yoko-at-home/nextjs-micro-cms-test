@@ -1,16 +1,15 @@
-/* eslint-disable react/destructuring-assignment */
 import Image from "next/image";
 import Link from "next/link";
 
-export const Card = ({ title, description, imgSrc, href }) => {
+export const Card = (props) => {
   return (
     <div className="p-4" style={{ maxWidth: "544px" }}>
       <div className="h-full overflow-hidden border-2 border-gray-200 rounded-md border-opacity-60">
-        {href ? (
-          <Link href={href} aria-label={`Link to ${title}`} passHref>
+        {props.href ? (
+          <Link href={props.href} aria-label={`Link to ${props.title}`} passHref>
             <Image
-              alt={title}
-              src={imgSrc}
+              alt={props.title}
+              src={props.imgSrc}
               className="object-cover object-center lg:h-48 md:h-36"
               width={544}
               height={306}
@@ -18,8 +17,8 @@ export const Card = ({ title, description, imgSrc, href }) => {
           </Link>
         ) : (
           <Image
-            alt={title}
-            src={imgSrc}
+            alt={props.title}
+            src={props.imgSrc}
             className="object-cover object-center lg:h-48 md:h-36"
             width={544}
             height={306}
@@ -27,27 +26,27 @@ export const Card = ({ title, description, imgSrc, href }) => {
         )}
         <div className="p-6">
           <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight z-50">
-            {href ? (
-              <Link href={href} aria-label={`Link to ${title}`}>
-                {title}
+            {props.href ? (
+              <Link href={props.href} aria-label={`Link to ${props.title}`}>
+                {props.title}
               </Link>
             ) : (
-              title
+              props.title
             )}
           </h2>
           <p
             className="mb-3 prose text-gray-500 max-w-none min-h-full md:max-h-28 md:overflow-x-auto"
             style={{ minHeight: "150px" }}
           >
-            {description}
+            {props.description}
           </p>
-          {href && (
+          {props.href && (
             <Link
-              href={href}
+              href={props.href}
               className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 "
-              aria-label={`Link to ${title}`}
+              aria-label={`Link to ${props.title}`}
             >
-              {title}詳細 &rarr;&rarr;&rarr;
+              {props.title}詳細 &rarr;&rarr;&rarr;
             </Link>
           )}
         </div>
@@ -55,15 +54,15 @@ export const Card = ({ title, description, imgSrc, href }) => {
     </div>
   );
 };
-export const CardModal = ({ title, description, imgSrc, href }) => {
+export const CardModal = (props) => {
   return (
     <div className="p-4" style={{ maxWidth: "800px" }}>
       <div className="flex flex-col md:flex-row h-full overflow-hidden border-2 border-gray-200 rounded-md border-opacity-60 p-3">
-        {href ? (
-          <a target="_blank" href={href} aria-label={`Link to ${title}`} passHref rel="noreferrer">
+        {props.href ? (
+          <a target="_blank" href={props.href} aria-label={`Link to ${props.title}`} passHref rel="noreferrer">
             <Image
-              alt={title}
-              src={imgSrc}
+              alt={props.title}
+              src={props.imgSrc}
               className="object-cover object-center lg:h-48 md:h-36"
               width={272}
               height={153}
@@ -71,8 +70,8 @@ export const CardModal = ({ title, description, imgSrc, href }) => {
           </a>
         ) : (
           <Image
-            alt={title}
-            src={imgSrc}
+            alt={props.title}
+            src={props.imgSrc}
             className="object-cover object-center lg:h-48 md:h-36"
             width={272}
             height={153}
@@ -80,26 +79,26 @@ export const CardModal = ({ title, description, imgSrc, href }) => {
         )}
         <div className="px-6  md:w-2/3">
           <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight z-50">
-            {href ? (
-              <Link href={href} aria-label={`Link to ${title}`}>
-                {title}
+            {props.href ? (
+              <Link href={props.href} aria-label={`Link to ${props.title}`}>
+                {props.title}
               </Link>
             ) : (
-              title
+              props.title
             )}
           </h2>
           <p className="mb-3 prose text-gray-500 max-w-none min-h-full md:max-h-24" style={{ minHeight: "150px" }}>
-            {description}
+            {props.description}
           </p>
-          {href && (
+          {props.href && (
             <a
               target="_blank"
-              href={href}
+              href={props.href}
               className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 "
-              aria-label={`Link to ${title}`}
+              aria-label={`Link to ${props.title}`}
               rel="noreferrer"
             >
-              {title}詳細 &rarr;&rarr;&rarr;
+              {props.title}詳細 &rarr;&rarr;&rarr;
             </a>
           )}
         </div>

@@ -60,7 +60,7 @@ const Members: NextPage = () => {
   };
 
   return (
-    <Layout>
+    <Layout theme="main">
       <PageSEO title={`Members- ${siteMetadata.author}`} description={siteMetadata.description} />
 
       <PageTitle>Members</PageTitle>

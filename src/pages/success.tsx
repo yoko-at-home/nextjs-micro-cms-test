@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { LayoutAbout } from "src/components/layout";
+import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
@@ -10,7 +10,7 @@ const Success: NextPage = () => {
   const router = useRouter();
   // console.log(router.query);
   return (
-    <LayoutAbout>
+    <Layout theme="flower">
       <PageSEO title={`Success- ${siteMetadata.author}`} description={siteMetadata.description} />
       <PageTitle>{router.query.subject}</PageTitle>
       <div className="flex justify-center">
@@ -21,7 +21,7 @@ const Success: NextPage = () => {
       <div className="container p-3 text-lg">
         <div className="mt-10 whitespace-pre-line break-words">{router.query.text}</div>
       </div>
-    </LayoutAbout>
+    </Layout>
   );
 };
 

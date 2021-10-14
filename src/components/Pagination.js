@@ -1,8 +1,7 @@
-/* eslint-disable react/destructuring-assignment */
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export const Pagination = ({ totalCount }) => {
+export const Pagination = (props) => {
   const PER_PAGE = 5;
 
   const range = (start, end) => {
@@ -26,7 +25,7 @@ export const Pagination = ({ totalCount }) => {
           )}
         </div>
         <ul className="flex">
-          {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => {
+          {range(1, Math.ceil(props.totalCount / PER_PAGE)).map((number, index) => {
             return (
               <li key={index}>
                 <Link href={`/news/page/${number}`}>

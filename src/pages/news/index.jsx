@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LayoutSub } from "src/components/layout";
+import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { Pagination } from "src/components/Pagination";
 import { PageSEO } from "src/components/SEO";
@@ -9,7 +9,7 @@ import { siteMetadata } from "src/data/siteMetadata";
 // eslint-disable-next-line react/destructuring-assignment
 const News = ({ news, totalCount }) => {
   return (
-    <LayoutSub>
+    <Layout theme="sub">
       <PageSEO title={`News- ${siteMetadata.author}`} description={siteMetadata.description} />
       <PageTitle>News</PageTitle>
       <div className="mt-10">
@@ -40,7 +40,7 @@ const News = ({ news, totalCount }) => {
         </ul>
         <Pagination totalCount={totalCount} />
       </div>
-    </LayoutSub>
+    </Layout>
   );
 };
 export const getStaticProps = async () => {

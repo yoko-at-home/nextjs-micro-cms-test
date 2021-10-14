@@ -8,46 +8,6 @@ import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
 
-// const items = [
-//   {
-//     id: 1,
-//     title: "aaaaライブラリ",
-//     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
-//   },
-//   {
-//     id: 2,
-//     title: "bbb",
-//     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
-//   },
-//   {
-//     id: 3,
-//     title: "ccc",
-//     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
-//   },
-//   {
-//     id: 4,
-//     title: "ddd",
-//     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
-//   },
-//   {
-//     id: 5,
-//     title: "eee",
-//     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit ?",
-//   },
-//   {
-//     id: 6,
-//     title: "fff",
-//     description:
-//       "Lorem ipsum dolor sit, amet consectetur adipisicing elit.amet consectetur adipisicing elit.amet consectetur adipisicing elit.amet consectetur adipisicing elit.amet consectetur adipisicing elit.aaaaAAAAAA AAAAAAA AAAAAAAAAA ?",
-//   },
-// ];
-
-// type ItemType = {
-//   id?: number,
-//   title: string,
-//   description: string,
-// };
-
 // const AppCard: VFC<ItemType> = (props) => {
 const AppCard = (props) => {
   return (
@@ -78,7 +38,7 @@ const AppCard = (props) => {
 // const Application: NextPage<ItemType> = () => {
 const Application = (props) => {
   return (
-    <Layout>
+    <Layout theme="main">
       <PageSEO title={`Application- ${siteMetadata.author}`} description={siteMetadata.description} />
 
       <PageTitle>Application</PageTitle>

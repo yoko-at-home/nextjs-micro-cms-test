@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-handler-names */
 /* eslint-disable import/no-default-export */
 import Link from "next/link";
@@ -13,8 +12,7 @@ import { productData } from "src/data/productData";
 import { siteMetadata } from "src/data/siteMetadata";
 
 const Products = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [Modal, open, close, isOpen] = useModal("root", {
+  const [Modal, open, close] = useModal("root", {
     preventScroll: true,
   });
   const [selectedItem, setSelectedItem] = useState();
@@ -45,7 +43,6 @@ const Products = () => {
             {productData.map((d) => {
               return (
                 <button
-                  // eslint-disable-next-line react/jsx-handler-names
                   onClick={() => {
                     return handleOnClick(d);
                   }}
@@ -54,24 +51,16 @@ const Products = () => {
                   href={d.href}
                   className="md:w-1/2 md"
                 >
-                  <Card
-                    key={d.href}
-                    title={d.title}
-                    description={d.description}
-                    imgSrc={d.imgSrc}
-                    // href={d.href}
-                  />
+                  <Card key={d.href} title={d.title} description={d.description} imgSrc={d.imgSrc} />
                 </button>
               );
             })}
           </div>
           <Modal>
-            <div className="bg-white px-2 sm:px-4 md:px-10 py-10 rounded">
+            <div className="bg-white px-2 sm:px-4 md:px-10 py-10 rounded text-gray-500">
               <h1 className="mt-5">会員登録がお済みのお客様は画像のタップからデータにアクセスできます。</h1>
               <p>
                 <CardModal
-                  // isOpen={d.key === selectedItem}
-                  // key={result.title}
                   title={selectedItem?.title}
                   description={selectedItem?.description}
                   imgSrc={selectedItem?.imgSrc}

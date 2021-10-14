@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
 
 const Home = ({ content }) => {
   return (
-    <Layout>
+    <Layout theme="main">
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
       <div className="divide-y divide-gray-200 ">
