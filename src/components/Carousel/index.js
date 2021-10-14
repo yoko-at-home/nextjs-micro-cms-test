@@ -58,8 +58,8 @@ export const Carousel = () => {
           font-size: 50px;
           color: #fff;
           font-weight: 500;
-          height: 100vh;
-          max-height: 100vh;
+          height: 120vh;
+          min-height: 120vh;
           border-radius: 5px;
         }
         .number-slide1 {
