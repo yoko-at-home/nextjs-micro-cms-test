@@ -1,9 +1,13 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/jsx-handler-names */
 /* eslint-disable import/no-default-export */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // import type { NextPage } from "next";
 // import type { VFC } from "react";
 import { useUser } from "@auth0/nextjs-auth0";
 import Link from "next/link";
+import { useCallback } from "react";
+import { useModal } from "react-hooks-use-modal";
 import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
@@ -36,6 +40,24 @@ const AppCard = (props) => {
   );
 };
 
+const AppCardModal = () => {
+  return (
+    <div className="p-4" style={{ maxWidth: "800px" }}>
+      <div className="pt-6 pb-8 space-y-2 md:space-y-5">
+        <p className="text-lg leading-7 text-gray-500 ">
+          Webサイトのすべての商品情報にアクセスするには、
+          <Link href="/members">
+            <a className="text-blue-400 hover:text-blue-500">Membersページ </a>
+          </Link>
+          よりログインしてください。
+          <br />
+          会員登録がお済みで無い方は、会員登録の申請をお願いします。
+        </p>
+      </div>
+    </div>
+  );
+};
+
 // const Application: NextPage<ItemType> = () => {
 const Application = (props) => {
   const { user, error, isLoading } = useUser();
@@ -51,6 +73,20 @@ const Application = (props) => {
         <div>{error.message}</div>
       </Layout>
     );
+
+  const [Modal, open, close] = useModal("root", {
+    preventScroll: true,
+  });
+
+  const handleOnClick = useCallback(() => {
+    // const result = props.news.find(({ title }) => {
+    //   return title === props.news.title;
+    // });
+    // // console.log(result);
+    // setSelectedNews(result);
+    open();
+  }, [open]);
+
   return (
     <Layout theme="main">
       <PageSEO title={`Application- ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -63,8 +99,35 @@ const Application = (props) => {
         <div className="container py-12"></div>
         <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
           {props.news.map((news) => {
-            return (
-              // eslint-disable-next-line react/jsx-key
+            return !user ? (
+              <div>
+                <button
+                  onClick={() => {
+                    return handleOnClick();
+                  }}
+                  key={news.title}
+                  title={news.title}
+                  description={news.description}
+                >
+                  <AppCard key={news.title} title={news.title} description={news.description} />
+                </button>
+                <Modal>
+                  <div className="bg-white px-2 sm:px-4 md:px-10 py-10 rounded text-gray-500">
+                    <p>
+                      <AppCardModal />
+                    </p>
+                    <div className="flex justify-between mt-8">
+                      <button
+                        onClick={close}
+                        className="rounded p-1 text-center font-medium text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 focus:from-purple-600 focus:to-yellow-600 opacity-80 mb-3 lg:mr-3 lg:py-2 hover:text-gray-100"
+                      >
+                        閉じる
+                      </button>
+                    </div>
+                  </div>
+                </Modal>
+              </div>
+            ) : (
               <Link href={`application/${news.id}`} passHref>
                 <a>
                   <AppCard key={news.title} title={news.title} description={news.description} />
