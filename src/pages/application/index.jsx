@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/jsx-handler-names */
 /* eslint-disable import/no-default-export */
@@ -64,7 +65,7 @@ const Application = (props) => {
   if (isLoading)
     return (
       <div className=" flex justify-center items-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500">Loading...</div>
+        <img alt="cats" src={"/static/gif/890-loading-animation.gif"} />
       </div>
     );
   if (error)

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useUser } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,7 @@ export default function Profile() {
   if (isLoading)
     return (
       <div className=" flex justify-center items-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500">Loading...</div>
+        <img alt="cats" src={"/static/gif/890-loading-animation.gif"} />
       </div>
     );
   if (error)
