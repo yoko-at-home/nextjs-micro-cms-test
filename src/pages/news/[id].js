@@ -4,7 +4,7 @@
 /* eslint-disable @next/next/no-img-element */
 // pages/news/[id].js
 import Link from "next/link";
-import { Layout } from "src/components/layout";
+import { Layout } from "src/layout";
 import { client } from "src/lib/client";
 import { Date } from "src/lib/date";
 

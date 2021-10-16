@@ -4,10 +4,10 @@ import { useUser } from "@auth0/nextjs-auth0";
 import type { NextPage } from "next";
 import Link from "next/link";
 import { FormMemberRegistration } from "src/components/FormMemberRegistration";
-import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
+import { Layout } from "src/layout";
 
 const Members: NextPage = () => {
   const { user } = useUser();

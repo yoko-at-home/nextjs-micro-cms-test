@@ -2,10 +2,10 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
+import { Layout } from "src/layout";
 
 const Contact: NextPage = () => {
   const router = useRouter();

@@ -2,7 +2,7 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 import Link from "next/link";
-import { Layout } from "src/components/layout";
+import { Layout } from "src/layout";
 // import { PageTitle } from "src/components/PageTitle";
 
 export default function Profile() {

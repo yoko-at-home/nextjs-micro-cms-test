@@ -2,9 +2,9 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { CustomLink } from "src/components/CustomLink";
-import { LayoutCarousel } from "src/components/layout";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
+import { LayoutCarousel } from "src/layout";
 
 const Showcase: NextPage = () => {
   return (

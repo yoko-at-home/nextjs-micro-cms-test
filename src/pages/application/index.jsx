@@ -9,10 +9,10 @@ import { useUser } from "@auth0/nextjs-auth0";
 import Link from "next/link";
 import { useCallback } from "react";
 import { useModal } from "react-hooks-use-modal";
-import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
+import { Layout } from "src/layout";
 
 // const AppCard: VFC<ItemType> = (props) => {
 const AppCard = (props) => {

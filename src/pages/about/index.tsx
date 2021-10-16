@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
+import { Layout } from "src/layout";
 
 const About: NextPage = () => {
   return (

@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
+import { Layout } from "src/layout";
 
 const Success: NextPage = () => {
   const router = useRouter();
