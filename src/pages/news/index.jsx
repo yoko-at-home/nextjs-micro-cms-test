@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { Pagination } from "src/components/Pagination";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
+import { Layout } from "src/layout";
 
 // eslint-disable-next-line react/destructuring-assignment
 const News = ({ news, totalCount }) => {

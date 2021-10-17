@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import type { NextPage } from "next";
+import { useUser } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { PageTitle } from "src/components/PageTitle";
-import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
-import { Layout } from "src/layout";
 
-const Contact: NextPage = () => {
+export const FormMemberRegistration = () => {
+  const { user } = useUser();
   const router = useRouter();
   const [isCheckboxState, setIsCheckboxState] = useState(false);
+  // console.log(user);
 
   const handleOnChange = () => {
     setIsCheckboxState((prevCheck) => {
@@ -19,24 +18,27 @@ const Contact: NextPage = () => {
 
   const handleRegisterUser = async (event: any) => {
     event.preventDefault();
+    const useremail = user?.email || "";
 
     const newsletter = isCheckboxState === true ? "はい" : "いいえ";
     const res = await fetch("/api/send", {
       body: JSON.stringify({
-        subject: "お問合せありがとうございました。",
+        subject: "会員登録のお申し込みを受け付けました",
         to: siteMetadata.email,
         text:
-          "以下の内容でお問合せを受け付けました。回答をお待ちください。\n\n" +
+          "以下の内容でお申し込みを受け付けました。回答をお待ちください。\n\n" +
           "お名前: " +
           event.target.fullname.value +
-          " 様" +
+          " 様\n" +
+          "研究室: " +
+          event.target.labo.value +
           "\nメールアドレス: " +
-          event.target.email.value +
+          useremail + // event.target.email.value +
           "\n\nお問い合わせ内容:\n" +
           event.target.message.value +
           "\n\n\nメール購読を希望: " +
           newsletter,
-        email: event.target.email.value,
+        email: useremail,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -52,13 +54,10 @@ const Contact: NextPage = () => {
   };
 
   return (
-    <Layout theme="main">
-      <PageSEO title={`Contact- ${siteMetadata.author}`} description={siteMetadata.description} />
-
-      <PageTitle>Contact</PageTitle>
-      <div className="divide-y divide-gray-200 ">
+    <div>
+      <div>
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <p className="text-lg leading-7 text-gray-500 ">お問い合わせページです。</p>
+          <p className="text-lg leading-7 text-gray-500 ">会員登録申し込み</p>
         </div>
         <div className="container sm:p-6 lg:px-20 mt-10 sm:mt-0">
           <div className="mt-5 md:mt-0">
@@ -77,16 +76,18 @@ const Contact: NextPage = () => {
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="email">メールアドレス</label>
+                <label htmlFor="labo">研究室</label>
                 <input
-                  id="email"
-                  name="email"
-                  type="email"
+                  id="labo"
+                  name="labo"
+                  type="text"
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                  placeholder="送信可能な形式：name@example.com"
-                  autoComplete="email"
+                  placeholder=""
                   required
                 />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email">メールアドレス：{user?.email}</label>
               </div>
               <div className="mb-3">
                 <label htmlFor="message">問合せ内容</label>
@@ -124,8 +125,6 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
-
-export default Contact;

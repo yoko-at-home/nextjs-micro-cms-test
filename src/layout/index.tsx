@@ -1,8 +1,8 @@
 import type { ReactNode, VFC } from "react";
 import { Carousel } from "src/components/Carousel";
-import { Footer } from "src/components/footer";
-import { Header } from "src/components/header";
 import { NavBarMobile } from "src/components/navbar";
+import { Footer } from "src/layout/footer";
+import { Header } from "src/layout/header";
 
 type Props = {
   className?: string;

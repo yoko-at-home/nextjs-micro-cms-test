@@ -3,8 +3,8 @@
 /* eslint-disable import/no-default-export */
 import Image from "next/image";
 import Link from "next/link";
-import { Layout } from "src/components/layout";
 import { Pagination } from "src/components/Pagination";
+import { Layout } from "src/layout";
 
 const PER_PAGE = 3;
 

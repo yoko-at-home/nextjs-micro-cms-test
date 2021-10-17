@@ -46,7 +46,7 @@ export const Card = (props) => {
               className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 "
               aria-label={`Link to ${props.title}`}
             >
-              {props.title}詳細 &rarr;&rarr;&rarr;
+              {props.title} 詳細 &rarr;&rarr;&rarr;
             </Link>
           )}
         </div>
@@ -98,7 +98,7 @@ export const CardModal = (props) => {
               aria-label={`Link to ${props.title}`}
               rel="noreferrer"
             >
-              {props.title}詳細 &rarr;&rarr;&rarr;
+              {props.title} 詳細 &rarr;&rarr;&rarr;
             </a>
           )}
         </div>

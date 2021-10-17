@@ -5,11 +5,11 @@ import { useCallback, useState } from "react";
 import { useModal } from "react-hooks-use-modal";
 import { Card } from "src/components/Card";
 import { CardModal } from "src/components/Card";
-import { Layout } from "src/components/layout";
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { productData } from "src/data/productData";
 import { siteMetadata } from "src/data/siteMetadata";
+import { Layout } from "src/layout";
 
 const Products = () => {
   const [Modal, open, close] = useModal("root", {

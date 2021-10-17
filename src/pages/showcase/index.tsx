@@ -2,9 +2,9 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { CustomLink } from "src/components/CustomLink";
-import { LayoutCarousel } from "src/components/layout";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
+import { LayoutCarousel } from "src/layout";
 
 const Showcase: NextPage = () => {
   return (
@@ -12,7 +12,7 @@ const Showcase: NextPage = () => {
       <PageSEO title={`Showcase- ${siteMetadata.author}`} description={siteMetadata.description} />
       <CustomLink href="/showcase" aria-label="Gen-Scent Research Laboratory">
         <div className="absolute -top-5 md:-top-20 right-5 bg-gradient-to-t from-gray-700 to-green-50 rounded-full p-3">
-          <img alt="cats" src={"/static/animation_500_cat.gif"} className="rounded-full w-16 md:w-24" />
+          <img alt="cats" src={"/static/gif/animation_500_cat.gif"} className="rounded-full w-16 md:w-24" />
         </div>
       </CustomLink>
 

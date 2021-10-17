@@ -2,7 +2,7 @@ import type { VFC } from "react";
 import { NavBarMobile } from "src/components/navbar";
 import { siteMetadata } from "src/data/siteMetadata";
 
-import { CustomLink } from "./CustomLink";
+import { CustomLink } from "../components/CustomLink";
 
 export const Footer: VFC = () => {
   return (
