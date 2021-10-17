@@ -2,7 +2,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/jsx-handler-names */
 /* eslint-disable import/no-default-export */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 // import type { NextPage } from "next";
 // import type { VFC } from "react";
 import { useUser } from "@auth0/nextjs-auth0";
