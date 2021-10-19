@@ -23,7 +23,7 @@ const Members: NextPage = () => {
             <div>
               <div className="pt-6 pb-8 space-y-2 md:space-y-5">
                 <p className="text-lg leading-7 text-gray-500 ">
-                  Webサイトのすべての商品情報にアクセスするには、会員登録をお願いしております。以下のログインリンクからメールアドレスを認証して、会員登録の申請をお願いします。
+                  非公開の商品情報のご提供には、会員登録をお願いしております。以下のログインリンクからメールアドレスを認証して、会員登録の申請をお願いします。
                 </p>
               </div>
               <div className="flex justify-end">
