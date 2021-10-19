@@ -23,10 +23,10 @@ export const FormMemberRegistration = () => {
     const newsletter = isCheckboxState === true ? "はい" : "いいえ";
     const res = await fetch("/api/send", {
       body: JSON.stringify({
-        subject: "会員登録のお申し込みを受け付けました",
+        subject: "登録を承りました。",
         to: siteMetadata.email,
         text:
-          "以下の内容でお申し込みを受け付けました。回答をお待ちください。\n\n" +
+          "以下の内容でご登録を承りました。後ほど、ご登録完了のお知らせをメールでお送りいたします。\n完了まで１⽇程度お時間がかかる場合がございますのでご了承ください。\n\n" +
           "お名前: " +
           event.target.fullname.value +
           " 様\n" +

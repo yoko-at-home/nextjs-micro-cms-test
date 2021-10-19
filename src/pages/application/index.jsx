@@ -45,13 +45,11 @@ const AppCardModal = () => {
     <div className="p-4" style={{ maxWidth: "800px" }}>
       <div className="pt-6 pb-8 space-y-2 md:space-y-5">
         <p className="text-lg leading-7 text-gray-500 ">
-          Webサイトのすべての商品情報にアクセスするには、
+          ただいま準備中です。会員登録いただいた方には資料をメールにてお送りします。
           <Link href="/members">
             <a className="text-blue-400 hover:text-blue-500">Membersページ </a>
-          </Link>
-          よりログインしてください。
-          <br />
-          会員登録がお済みで無い方は、会員登録の申請をお願いします。
+          </Link>{" "}
+          より申請をお願いします。
         </p>
       </div>
     </div>
