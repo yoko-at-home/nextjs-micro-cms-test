@@ -1,4 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
 import { PageTitle } from "src/components/PageTitle";
 import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
@@ -23,19 +22,26 @@ export const getStaticProps = async () => {
   };
 };
 
-const Home = ({ content }) => {
+const Home = (props) => {
   return (
     <Layout theme="main">
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
       <div className="divide-y divide-gray-200 ">
         <div className="pt-6 md:mt-8 pb-8 space-y-2 md:space-y-5">
-          <PageTitle>{content.title}</PageTitle>
+          <PageTitle>{props.content.title}</PageTitle>
+          <PageTitle title={props.content.title} />
           <p className="text-lg leading-7 text-gray-500 ">
             {/* {siteMetadata.description}
             <br /> */}
-            {content.body}
+            {/* {content.body} */}
           </p>
+          <div
+            dangerouslySetInnerHTML={{
+              // eslint-disable-next-line @typescript-eslint/naming-convention
+              __html: `${props.content.body}`,
+            }}
+          />
         </div>
 
         {/* <h2 className="mt-10 text-2xl font-extrabold leading-9 tracking-tight text-gray-700  sm:text-4xl sm:leading-10 md:text-5xl md:leading-10">
