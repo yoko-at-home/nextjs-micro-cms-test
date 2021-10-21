@@ -1,11 +1,9 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { useUser } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { siteMetadata } from "src/data/siteMetadata";
 
 export const FormMemberRegistration = () => {
-  const { user } = useUser();
   const router = useRouter();
   const [isCheckboxState, setIsCheckboxState] = useState(false);
   // console.log(user);
@@ -18,7 +16,7 @@ export const FormMemberRegistration = () => {
 
   const handleRegisterUser = async (event: any) => {
     event.preventDefault();
-    const useremail = user?.email || "";
+    // const useremail = user?.email || "";
 
     const newsletter = isCheckboxState === true ? "はい" : "いいえ";
     const res = await fetch("/api/send", {
@@ -33,12 +31,12 @@ export const FormMemberRegistration = () => {
           "研究室: " +
           event.target.labo.value +
           "\nメールアドレス: " +
-          useremail + // event.target.email.value +
+          event.target.email.value +
           "\n\nお問い合わせ内容:\n" +
           event.target.message.value +
           "\n\n\nメール購読を希望: " +
           newsletter,
-        email: useremail,
+        email: event.target.email.value,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +85,16 @@ export const FormMemberRegistration = () => {
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="email">メールアドレス：{user?.email}</label>
+                <label htmlFor="email">メールアドレス</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  placeholder="送信可能な形式：name@example.com"
+                  autoComplete="email"
+                  required
+                />
               </div>
               <div className="mb-3">
                 <label htmlFor="message">問合せ内容</label>

@@ -25,7 +25,7 @@ const Showcase: NextPage = () => {
             Maine Coon world
           </h1>
         </div>
-        <div className="p-6" style={{ textShadow: "px 5px 5px rgba(0, 0, 0, 0.9)" }}>
+        <div className="p-6" style={{ textShadow: "0px 5px 5px rgba(0, 0, 0, 0.9)" }}>
           Cattery CANON is a tiny Maine Coon breeder in Zama City, Kanagawa Prefecure. I am a member of Cat Fanciers
           Association (CFA) and The International Cat Association (TICA). The headquarters are in USA.
         </div>
