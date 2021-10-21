@@ -22,12 +22,12 @@ const Showcase: NextPage = () => {
             Welcome to
             <br />
             <span className="text-4xl my-5">Canon&#39;s</span> <br />
-            Maincoon world
+            Maine Coon world
           </h1>
         </div>
         <div className="p-6" style={{ textShadow: "px 5px 5px rgba(0, 0, 0, 0.9)" }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus impedit ipsam doloremque doloribus voluptate ut
-          tempora fugiat enim.
+          Cattery CANON is a tiny Maine Coon breeder in Zama City, Kanagawa Prefecure. I am a member of Cat Fanciers
+          Association (CFA) and The International Cat Association (TICA). The headquarters are in USA.
         </div>
         <Link href="/showcase/page" passHref>
           <div className="rounded p-2 text-2xl md:text-4xl bg-gradient-to-tl from-pink-800 bg-yellow-400 hover:text-yellow-600 hover:bg-green-400 inline-block bg-opacity-80 uppercase">
@@ -35,9 +35,8 @@ const Showcase: NextPage = () => {
           </div>
         </Link>
         <div className="p-6" style={{ textShadow: "0px 5px 5px rgba(0, 0, 0, 0.9)" }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus impedit ipsam doloremque doloribus voluptate ut
-          tempora fugiat enim, soluta cumque reiciendis nesciunt officiis voluptatum harum nemo deleniti natus atque
-          quo.
+          Cattery CANONは、神奈川県座間市にある、メインクーン専門の小さなきゃテリーです。アメリカに本部を置く愛猫団体
+          CFA TICAに所属しています。
         </div>
       </div>
     </LayoutCarousel>
