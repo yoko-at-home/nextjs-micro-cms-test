@@ -16,7 +16,7 @@ const AboutHeader = () => {
       <div
         className="min-w-full h-screen bg-top bg-cover"
         style={{
-          backgroundImage: "url('/static/images/laurel.png')",
+          background: "center/cover no-repeat url('/static/images/laurel.png')",
         }}
       >
         <div className="absolute top-10 p-5 sm:left-10 md:top-14 lg:top-10 text-2xl sm:text-3xl text-white sm:whitespace-nowrap">
