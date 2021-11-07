@@ -28,11 +28,11 @@ const Home = (props) => {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
       <div className="divide-y divide-gray-200">
-        <div className="pt-6 md:mt-8 pb-8 space-y-2 md:space-y-5  text-pink-500">
+        <div className="pt-6 md:mt-8 pb-8 space-y-2 md:space-y-5">
           <PageTitle>{props.content.title}</PageTitle>
           <p className="text-lg leading-7 text-gray-500 mt-52">{/* {siteMetadata.description} */}</p>
           <div
-            className="text-lg text-pink-500 pt-25"
+            className="text-lg pt-25"
             dangerouslySetInnerHTML={{
               // eslint-disable-next-line @typescript-eslint/naming-convention
               __html: `${props.content.body}`,
