@@ -1,4 +1,3 @@
-import cc from "classcat";
 import Image from "next/image";
 import type { VFC } from "react";
 import { CustomLink } from "src/components/CustomLink";
@@ -22,15 +21,7 @@ export const Header: VFC<Props> = (props) => {
 
   return (
     <>
-      <header
-        className={cc([
-          "h-60 relative",
-          {
-            "bg-gray-500 bg-opacity-70": props.type === "main",
-            "opacity-100": props.type !== "main",
-          },
-        ])}
-      >
+      <header className="h-58 relative">
         <Image
           layout="fill"
           className="object-center object-cover pointer-events-none"
