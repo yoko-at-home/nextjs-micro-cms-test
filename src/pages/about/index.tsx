@@ -17,16 +17,16 @@ const About: NextPage = () => {
         <PageSEO title={`About- ${siteMetadata.author}`} description={siteMetadata.description} />
         <div className="flex flex-col justify-between">
           <PageTitle>玄川リサーチ</PageTitle>
-          <h2 className="mb-5 lg:mb-10 text-xl lg:text-3xl md:text-2xl font-semibold">Gen-Scent Research Laboratory</h2>
+          <h2 className="mb-5 text-xl font-semibold md:text-2xl lg:mb-10 lg:text-3xl">Gen-Scent Research Laboratory</h2>
           <p className="text-lg"> Shimomeguro, Meguro, Tokyo, Japan</p>
           <div className="container flex pt-6 pb-8 space-y-2 md:space-y-5">
-            <p className="divide-y divide-gray-200 text-xl whitespace-nowrap mr-5 font-semibold">事業内容</p>
+            <p className="mr-5 text-xl font-semibold whitespace-nowrap divide-y divide-gray-200">事業内容</p>
             <div className="">
               <p>GC-MS[用ソフトウェア、データベース販売</p>
               <p>香り分析関連製品販売</p>
             </div>
           </div>
-          <div className="flex-1 container">
+          <div className="container flex-1">
             <div className="mb-5 font-semibold">ロゴマークについて</div>
             <div className="flex">
               <div className="mr-5">
@@ -40,7 +40,7 @@ const About: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="divide-y divide-gray-200 mt-40 sm:mt-16 text-gray-100 text-left container">
+          <div className="container mt-40 text-left text-gray-100 divide-y divide-gray-200 sm:mt-16">
             <p>写真は明治38年に国内に渡来した月桂樹で、日比谷公園、青山霊園などに植樹されたうちの一株です。</p>
           </div>
         </div>
