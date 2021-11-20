@@ -18,24 +18,23 @@ const AppCard = (props) => {
   return (
     <div key={props.id}>
       <div
-        className="relative h-64 w-full flex items-end justify-start text-left bg-cover bg-center"
+        className="relative h-60 w-full flex items-end justify-start text-left bg-cover bg-center"
         // style={{ backgroundImage: "url(https://source.unsplash.com/1600x500/?plant,flower)" }}
         style={{ backgroundImage: "url(static/images/laurel.png)" }}
       >
-        <div className="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
-        <div className="absolute top-3 right-5 left-0 mx-5 mt-2 flex justify-between items-center">
+        <div className="absolute top-3 m-3 flex flex-col justify-between">
           <div
             // href="#"
-            className="cursor-pointer text-md rounded bg-gray-600 text-gray-100 px-5 py-2 hover:bg-white bg-opacity-80 hover:text-indigo-600 transition ease-in-out duration-500"
+            className="h-16 cursor-pointer text-lg text-gray-100 p-1 hover:bg-gray-50 hover:bg-opacity-20 transition ease-in-out duration-500 word-break overflow-y-scroll"
           >
             {props.title}
           </div>
+          <main className="z-10">
+            <div className="cursor-pointer p-1 h-32 text-md tracking-tight text-white hover:bg-gray-50 hover:bg-opacity-20 word-break overflow-y-scroll transition ease-in-out duration-500">
+              {props.description}
+            </div>
+          </main>
         </div>
-        <main className="p-5 z-10">
-          <div className="cursor-pointer p-1 h-28 text-md tracking-tight text-white hover:bg-gray-50 hover:bg-opacity-20 rounded word-break overflow-y-scroll transition ease-in-out duration-500">
-            {props.description}
-          </div>
-        </main>
       </div>
     </div>
   );
@@ -81,11 +80,11 @@ const Application = (props) => {
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <p className="text-lg leading-7 text-gray-500 ">製品をヒーローイメージを使ってご紹介できます。</p>
         </div>
-        <div className="container py-12"></div>
-        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
+        <div className="container py-10"></div>
+        <div className="grid grid-cols-3  gap-3">
           {props.news.map((news) => {
             return (
-              <Link href={`application/${news.id}`} passHref>
+              <Link href={`application/${news.id}`} passHref key={news.id}>
                 <a>
                   <AppCard key={news.title} title={news.title} description={news.description} />
                 </a>
@@ -103,7 +102,7 @@ export const getStaticProps = async () => {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     headers: { "X-API-KEY": process.env.NEXT_PUBLIC_API_KEY },
   };
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news?offset=0&limit=6`, key)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/news?offset=0&limit=9`, key)
     .then((res) => {
       return res.json();
     })
