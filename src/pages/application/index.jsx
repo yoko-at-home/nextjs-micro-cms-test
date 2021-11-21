@@ -76,22 +76,20 @@ const Application = (props) => {
       <PageSEO title={`Application- ${siteMetadata.author}`} description={siteMetadata.description} />
 
       <PageTitle>Application</PageTitle>
-      <div className="divide-y divide-gray-200 ">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <p className="text-lg leading-7 text-gray-500 ">製品をヒーローイメージを使ってご紹介できます。</p>
-        </div>
-        <div className="container py-10"></div>
-        <div className="grid grid-cols-3  gap-3">
-          {props.news.map((news) => {
-            return (
-              <Link href={`application/${news.id}`} passHref key={news.id}>
-                <a>
-                  <AppCard key={news.title} title={news.title} description={news.description} />
-                </a>
-              </Link>
-            );
-          })}
-        </div>
+      <div className="pt-6 pb-8 space-y-2 md:space-y-5">
+        <p className="text-lg leading-7 text-gray-500 ">製品をヒーローイメージを使ってご紹介できます。</p>
+      </div>
+      <div className="container py-10"></div>
+      <div className="grid grid-cols-3  gap-3">
+        {props.news.map((news) => {
+          return (
+            <Link href={`application/${news.id}`} passHref key={news.id}>
+              <a>
+                <AppCard key={news.title} title={news.title} description={news.description} />
+              </a>
+            </Link>
+          );
+        })}
       </div>
     </Layout>
   );

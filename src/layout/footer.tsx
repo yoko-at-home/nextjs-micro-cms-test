@@ -7,7 +7,7 @@ import { CustomLink } from "../components/CustomLink";
 export const Footer: VFC = () => {
   return (
     <footer>
-      <div className="flex flex-col items-center mt-16">
+      <div className="flex flex-col items-center mt-32">
         <div className="flex mb-2 space-x-2 text-sm">
           <div>代表: {siteMetadata.author}</div>
           <div>{` • `}</div>

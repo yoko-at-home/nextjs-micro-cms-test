@@ -28,7 +28,7 @@ export const Header: VFC<Props> = (props) => {
           src={themeImage[props.theme || "main"]}
           alt={"text"}
         />
-        <h1 className="absolute top-10 p-5 sm:left-10 md:top-14 lg:top-10 text-2xl sm:text-3xl text-white sm:whitespace-nowrap">
+        <h1 className="absolute top-20 sm:block p-5 sm:left-10 text-2xl sm:text-3xl text-white sm:whitespace-nowrap">
           <CustomLink href="/" aria-label="Gen-Scent Research Laboratory">
             <div className="flex items-center justify-between mb-8">
               {typeof siteMetadata.headerTitle === "string" ? (

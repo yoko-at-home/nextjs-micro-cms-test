@@ -27,10 +27,10 @@ const Home = (props) => {
     <Layout theme="main">
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
+      <PageTitle>{props.content.title}</PageTitle>
       <div className="divide-y divide-gray-200">
-        <div className="pt-6 md:mt-8 pb-8 space-y-2 md:space-y-5">
-          <PageTitle>{props.content.title}</PageTitle>
-          <p className="text-lg leading-7 text-gray-500 mt-52">{/* {siteMetadata.description} */}</p>
+        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
+          <p className="text-lg leading-7 text-gray-500">{/* {siteMetadata.description} */}</p>
           <div
             className="text-lg pt-25"
             dangerouslySetInnerHTML={{
@@ -39,10 +39,6 @@ const Home = (props) => {
             }}
           />
         </div>
-
-        {/* <h2 className="mt-10 text-2xl font-extrabold leading-9 tracking-tight text-gray-700  sm:text-4xl sm:leading-10 md:text-5xl md:leading-10">
-          What's new!
-        </h2> */}
       </div>
     </Layout>
   );
