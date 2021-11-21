@@ -1,7 +1,8 @@
 /* eslint-disable import/no-default-export */
 /* eslint-disable @next/next/no-img-element */
 // pages/application/[id].js
-import Link from "next/link";
+import { Button } from "src/components/button";
+import { CustomLink } from "src/components/CustomLink";
 import { Layout } from "src/layout";
 import { client } from "src/lib/client";
 import { Date } from "src/lib/date";
@@ -37,10 +38,10 @@ export default function ApplicationId(props) {
             __html: `${props.news.body}`,
           }}
         />
-        <div className="absolute mt-5 text-gray-300 sm:px-4 bg-gradient-to-r from-gray-400 to-gray-500 opacity-80 p-3 rounded inline-block right-10 md:right-20 lg:right-40">
-          <Link href={`/application`}>
-            <a className="">Application Top</a>
-          </Link>
+        <div className="absolute mt-5 inline-block right-10 md:right-20 lg:right-40">
+          <CustomLink href="/application">
+            <Button>Application Top</Button>
+          </CustomLink>
         </div>
       </main>
     </Layout>
