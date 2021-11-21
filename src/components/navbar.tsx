@@ -15,7 +15,7 @@ const items = [
 
 export const NavBarDesktop: VFC = () => {
   return (
-    <nav className="hidden justify-center mt-40 text-center sm:flex">
+    <nav className="justify-center mt-40 text-center sm:flex">
       {items.map(({ href, label }) => {
         return (
           <Link key={href} href={href}>
@@ -45,8 +45,7 @@ export const NavBarMobile: VFC = () => {
   };
   return (
     <>
-      {/* <div className="sm:hidden absolute top-6 left-6"> */}
-      <div className="fixed right-5 bottom-10 px-2 pt-1 bg-gray-400 bg-opacity-80 rounded sm:hidden">
+      <div className="hidden fixed right-5 bottom-24 px-2 pt-1 bg-gray-400 bg-opacity-80 rounded">
         <button
           type="button"
           className="mr-1 ml-1 w-8 h-8 rounded"
