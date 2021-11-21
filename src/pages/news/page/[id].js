@@ -12,7 +12,7 @@ const PER_PAGE = 3;
 export default function NewsPageId({ news, totalCount }) {
   return (
     <Layout theme="newsArticles">
-      <ul className="mt-10 z-50">
+      <ul className="mt-20 z-50">
         {news.map((news) => {
           return (
             <li key={news.id} className="mb-8">
