@@ -32,7 +32,7 @@ const Home = (props) => {
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <p className="text-lg leading-7 text-gray-500">{/* {siteMetadata.description} */}</p>
           <div
-            className="text-lg pt-25"
+            className="pt-25 sm:text-lg"
             dangerouslySetInnerHTML={{
               // eslint-disable-next-line @typescript-eslint/naming-convention
               __html: `${props.content.body}`,
