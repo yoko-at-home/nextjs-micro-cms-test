@@ -37,15 +37,6 @@ export const Pagination = (props) => {
             );
           })}
         </ul>
-        {/* <div>
-          {router.asPath === "/news" ? null : (
-            <Link href={`/news`}>
-              <a className="text-gray-300 px-3 bg-gradient-to-r from-gray-400 to-gray-500 opacity-80 p-3 rounded">
-                News Top
-              </a>
-            </Link>
-          )}
-        </div> */}
       </nav>
     </div>
   );
