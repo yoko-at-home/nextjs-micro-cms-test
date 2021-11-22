@@ -14,8 +14,10 @@ export default function BlogId({ news }) {
   return (
     <Layout theme="newsArticles">
       <main>
-        <h1 className="font-bold text-lg sm:text-xl md:text-3xl lg:text-4xl mt-6 lg:text-center py-12">{news.title}</h1>
-        <div className="flex flex-col text-right mt-3 mb-10">
+        <h1 className="font-bold text-lg sm:text-xl md:text-3xl lg:text-4xl mt-6 lg:text-center py-12 animation">
+          {news.title}
+        </h1>
+        <div className="flex flex-col text-right mt-3 mb-10 animation">
           {publishedAt === revisedAt ? (
             <div>
               Published: <Date className="text-sm text-blueGray-500 mb-3" dateString={news.publishedAt} />
@@ -32,6 +34,7 @@ export default function BlogId({ news }) {
           )}
         </div>
         <div
+          className="animation"
           dangerouslySetInnerHTML={{
             // eslint-disable-next-line @typescript-eslint/naming-convention
             __html: `${news.body}`,
